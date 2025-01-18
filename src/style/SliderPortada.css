@@ -1,0 +1,38 @@
+.SliderPortada{
+    display: flex;
+    justify-content: center;
+}
+
+.ContanerSlider {
+    height: auto;
+    /* Ajustado para mayor espacio */
+    width: 1200px;
+    /* position: absolute; */
+    z-index: 1;
+    /* bottom: -230px; */
+    display: flex;
+    justify-content: center;
+}
+
+.swiper {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    /* Sin padding adicional */
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    /* Se adapta al contenedor */
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Mantiene la proporción */
+}

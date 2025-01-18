@@ -1,4 +1,5 @@
 import "../../style/Inicio.css";
+import SliderPortada from "../Slider/SliderPortada";
 
 const Inicio = () => {
   return (
@@ -18,6 +19,9 @@ const Inicio = () => {
               </div>
             </div>
           </div>
+        </article>
+        <article>
+            <SliderPortada></SliderPortada>
         </article>
       </section>
     </div>
