@@ -1,4 +1,5 @@
 import "../../style/Inicio.css";
+import Productos from "../Productos/Productos";
 import SliderPortada from "../Slider/SliderPortada";
 
 const Inicio = () => {
@@ -22,6 +23,9 @@ const Inicio = () => {
         </article>
         <article>
             <SliderPortada></SliderPortada>
+        </article>
+        <article>
+          <Productos></Productos>
         </article>
       </section>
     </div>
