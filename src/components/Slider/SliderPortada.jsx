@@ -29,24 +29,27 @@ const SliderPortada = () => {
                 >
                     <SwiperSlide>
                         <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
+                        <div>Final Fantasy</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
+                        <div>Final Fantasy</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
+                        <div>Final Fantasy</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
+                        <div>Final Fantasy</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
+                        <div>Final Fantasy</div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
+                        <div>Final Fantasy</div>
                     </SwiperSlide>
                 </Swiper>
             </div>

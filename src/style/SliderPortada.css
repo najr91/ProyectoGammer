@@ -26,6 +26,8 @@
     background-size: cover;
     width: 200px;
     height: 300px;
+    overflow: hidden;
+    position: relative;
     /* Se adapta al contenedor */
 }
 
@@ -35,4 +37,31 @@
     height: 100%;
     object-fit: cover;
     /* Mantiene la proporción */
+}
+
+.swiper-slide:hover img{
+    scale: 1.1;
+    transition: 1s ease;
+}
+
+.swiper-slide:hover div{
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.swiper-slide div{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(14, 13, 13, 0.498);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    font-size: 25px;
+    color: greenyellow;
+    font-weight: bold;
 }
