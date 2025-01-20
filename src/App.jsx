@@ -3,6 +3,7 @@ import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Inicio from './components/pages/Inicio';
+import Footer from './components/pages/common/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
          <Routes>
           <Route path='/' element={<Inicio></Inicio>}></Route>
          </Routes>
+         <Footer/>
         </BrowserRouter>
       </div>
       
