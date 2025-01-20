@@ -19,6 +19,15 @@ const Productos = () => {
           <div className="col-12 col-md-4 col-lg-4">
             <CardProducto></CardProducto>
           </div>
+          <div className="col-12 col-md-4 col-lg-4">
+            <CardProducto></CardProducto>
+          </div>
+          <div className="col-12 col-md-4 col-lg-4">
+            <CardProducto></CardProducto>
+          </div>
+          <div className="col-12 col-md-4 col-lg-4">
+            <CardProducto></CardProducto>
+          </div>
         </div>
       </div>
     </div>
