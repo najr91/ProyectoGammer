@@ -65,3 +65,10 @@
     color: greenyellow;
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 599px){
+    .SliderPortada{
+        display: none;
+    }
+}

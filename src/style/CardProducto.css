@@ -10,7 +10,6 @@
 .CardImg{
     height: 250px;
     width: 100%;
-    background-color: red;
     overflow: hidden;
     position: relative;
 }
@@ -18,6 +17,7 @@
 .CardImg img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .CardImg:hover img{
@@ -51,4 +51,24 @@
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.219);
+}
+
+
+@media screen and (max-width: 599px){
+    .CardProducto{
+        height: auto;
+        margin-bottom: 10px;
+    }
+    }
+
+@media screen and (max-width: 991px){
+    .CardProducto{
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .CardImg{
+        height: 200px;
+
+    }
 }
