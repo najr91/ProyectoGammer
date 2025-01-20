@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Inicio from './components/pages/Inicio';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div className='App'>
-        <h1>Proyecto Gammer</h1>
+        <BrowserRouter>
+         <Routes>
+          <Route path='/' element={<Inicio></Inicio>}></Route>
+         </Routes>
+        </BrowserRouter>
       </div>
       
     </>

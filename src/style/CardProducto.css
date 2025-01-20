@@ -1,0 +1,54 @@
+.CardProducto{
+    height: 400px;
+    width: 100%;
+    background-color: #191919;
+    color: white;
+    border-bottom: 5px solid greenyellow;
+    margin-top: 20px;
+}
+
+.CardImg{
+    height: 250px;
+    width: 100%;
+    background-color: red;
+    overflow: hidden;
+    position: relative;
+}
+
+.CardImg img{
+    height: 100%;
+    width: 100%;
+}
+
+.CardImg:hover img{
+    scale: 1.1;
+    transition: 0.5s ease;
+}
+
+.CardImg::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.495);
+    opacity: 0;
+}
+
+.CardProducto:hover .CardImg::after{
+    opacity: 1;
+    transition: 0.5s ease-in;
+} 
+
+.consola {
+    display: flex;
+    gap: 10px;
+}
+
+.consola span {
+    background-color: #191919;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.219);
+}
