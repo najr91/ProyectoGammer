@@ -9,7 +9,7 @@ const Footer = () => {
         <main className="content"></main>
         <footer className="footer ">
           <div className="row mx-3">
-            <div className="col-12 col-md-3 col-lg-3 fs-4 p-2 ms-3">
+            <div className="col-12 col-md-3 col-lg-3 fs-4 p-2">
               <ul className="list-unstyled">
                 <li>
                   <p>
