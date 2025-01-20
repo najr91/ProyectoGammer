@@ -10,7 +10,6 @@
 
   .footer {
     background-color: greenyellow;
-    color: black;
-    padding: 10px;
-    text-align: center;
+    color: rgb(255, 255, 255);
+
   }
