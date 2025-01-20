@@ -1,7 +1,6 @@
 .PortadaInicio{
     height: 600px;
     width: 100%;
-    background-color: aqua;
     display: flex;
     align-items:center;
     background-image: url('https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt2e6f8da2c1562efc/672bd5a0ef121637f1bf6942/Template-Bnet-Launcher-CUI-Phoenix.jpg');
