@@ -56,6 +56,7 @@ const DetalleProducto = () => {
   };
 
   return (
+    // pasar el objeto por el id 
     <section className="container mt-5">
       <article className="row justify-content-center">
         <div className="col-12 col-md-8">
@@ -65,7 +66,7 @@ const DetalleProducto = () => {
                 <img
                   src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
                   alt="Juego Horizond"
-                  className="img-fluid rounded-start"
+                  className="img-fluid rounded-start "
                 />
               </div>
               <div className="col-md-7">
@@ -82,13 +83,14 @@ const DetalleProducto = () => {
                   </div>
                   <div className="d-flex justify-content-between align-items-center">
                     <b className="text-success">Disponible</b>
+                    {/* error 404 */}
                     <button className="btn btn-outline-dark">Añadir al carrito</button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="card-footer">
+            <div className="card-footer p-2">
               <h5 className="Calificacion-titulo">Calificación</h5>
               <div className="Calificacion">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -96,7 +98,7 @@ const DetalleProducto = () => {
                     key={star}
                     className={`Estrella ${
                       Estrellas >= star || hoveredEstrella >= star ? "filled" : ""
-                    }`}
+                    } fs-3 `}
                     onClick={() => handleEstrellasChange(star)}
                     onMouseEnter={() => handleMouseEnter(star)}
                     onMouseLeave={handleMouseLeave}
