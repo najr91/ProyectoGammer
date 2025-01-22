@@ -90,13 +90,13 @@ const DetalleProducto = () => {
               <div className="Calificacion">
 
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <span
+                  <b
                     key={star}
                     className={`Estrella ${Estrellas >= star ? "filled" : ""}`}
                     onClick={() => handleEstrellasChange(star)}
                   >
                     &#9733;
-                  </span>
+                  </b>
                 ))}
               </div>
             </div>
@@ -125,8 +125,8 @@ const DetalleProducto = () => {
 
                 {ComentariosList.map((c, index) => (
                   <div key={index} className="Comentario">
-                    <strong>{c.user}</strong> -{" "}
-                    <span className="text-muted">{c.Estrellas} Estrellas</span>
+                    <b>{c.user}</b> -{" "}
+                    <b className="text-muted">{c.Estrellas} Estrellas</b>
                     <p>{c.text}</p>
                   </div>
                 ))}
