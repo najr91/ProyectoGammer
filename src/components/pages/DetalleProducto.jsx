@@ -15,6 +15,11 @@ const DetalleProducto = () => {
       text: "Buen juego, pero algunas secciones son un poco repetitivas.",
       Estrellas: 4,
     },
+    {
+      user: "José Martinéz",
+      text: "No me gusto, le falta mas opciones para modificar los personajes.",
+      Estrellas:2,
+    }
   ]);
   const [hoveredEstrella, setHoveredEstrella] = useState(0);
 
