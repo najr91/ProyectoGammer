@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../../style/detalleProducto.css";
-import { useParams } from "react-router-dom";
 
 const DetalleProducto = () => {
-    const [Estrellas, setEstrellas] = useState(0);
-  const [Comentario, setComentario] = useState(""); 
+  const [Estrellas, setEstrellas] = useState(0);
+  const [Comentario, setComentario] = useState("");
   const [ComentariosList, setComentariosList] = useState([
     {
       user: "Juan Perez",
@@ -17,6 +16,7 @@ const DetalleProducto = () => {
       Estrellas: 4,
     },
   ]);
+  const [hoveredEstrella, setHoveredEstrella] = useState(0);
 
   const handleComentarioChange = (event) => {
     setComentario(event.target.value);
@@ -42,6 +42,14 @@ const DetalleProducto = () => {
     setEstrellas(newEstrellas);
   };
 
+  const handleMouseEnter = (star) => {
+    setHoveredEstrella(star);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredEstrella(0);
+  };
+
   return (
     <section className="container mt-5">
       <article className="row justify-content-center">
@@ -55,7 +63,6 @@ const DetalleProducto = () => {
                   className="img-fluid rounded-start"
                 />
               </div>
-
               <div className="col-md-7">
                 <div className="card-body">
                   <p className="card-text text-muted">Código: #123</p>
@@ -64,36 +71,30 @@ const DetalleProducto = () => {
                   <p className="card-description">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Rerum sequi hic commodi accusamus blanditiis facere.
-                    Temporibus repellendus aliquid totam eligendi minima
-                    cupiditate dolores, dicta iure fugit magni rem voluptatum
-                    atque.
                   </p>
-
                   <div className="mb-3">
                     <b>Género:</b> Acción y Aventura
                   </div>
-
                   <div className="d-flex justify-content-between align-items-center">
                     <b className="text-success">Disponible</b>
-                    <button className="btn btn-outline-dark">
-                      Añadir al carrito
-                    </button>
+                    <button className="btn btn-outline-dark">Añadir al carrito</button>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="card-footer">
-
               <h5 className="Calificacion-titulo">Calificación</h5>
-              
               <div className="Calificacion">
-
                 {[1, 2, 3, 4, 5].map((star) => (
                   <b
                     key={star}
-                    className={`Estrella ${Estrellas >= star ? "filled" : ""}`}
+                    className={`Estrella ${
+                      Estrellas >= star || hoveredEstrella >= star ? "filled" : ""
+                    }`}
                     onClick={() => handleEstrellasChange(star)}
+                    onMouseEnter={() => handleMouseEnter(star)}
+                    onMouseLeave={handleMouseLeave}
                   >
                     &#9733;
                   </b>
@@ -102,11 +103,9 @@ const DetalleProducto = () => {
             </div>
 
             <div className="card-body">
-
               <h5>Comentarios</h5>
               <form onSubmit={handleComentarioSubmit}>
                 <div className="mb-3">
-
                   <textarea
                     className="form-control rezine"
                     rows="3"
@@ -115,14 +114,12 @@ const DetalleProducto = () => {
                     onChange={handleComentarioChange}
                   />
                 </div>
-
                 <button type="submit" className="btn btn-primary">
                   Enviar Comentario
                 </button>
               </form>
 
               <div className="Comentarios-list mt-4">
-
                 {ComentariosList.map((c, index) => (
                   <div key={index} className="Comentario">
                     <b>{c.user}</b> -{" "}
@@ -134,10 +131,10 @@ const DetalleProducto = () => {
             </div>
           </div>
         </div>
-      
       </article>
     </section>
   );
 };
 
 export default DetalleProducto;
+
