@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../style/Style.css";
+import "../../style/Style.css";
 import { Clock, Facebook, Instagram, Whatsapp } from "react-bootstrap-icons";
 
 const Footer = () => {
