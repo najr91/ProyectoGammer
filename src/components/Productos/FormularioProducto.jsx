@@ -15,14 +15,11 @@ const FormularioProducto = () => {
 
   const onSubmit = async (producto) => {
     const respuesta = await crearProductoAPI(producto);
-    console.log(respuesta);
     if (respuesta.status === 201) {
       alert("el producto se creo con exito");
       reset();
-      //redirigirlo a la pag de administrador
-      navegacion("/administrador");
     } else {
-      alert("Ocurrió un error al crear el producto");
+      alert("Ocurrio un error inesperado, intentelo mas tarde");
     }
   };
 

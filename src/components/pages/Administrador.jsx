@@ -3,23 +3,23 @@ import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemProducto from "../Productos/ItemProducto";
 import "../../style/Administrador.css";
+import { listarProductoAPI } from "../helpers/queries";
 
 const Administrador = () => {
   const [listaProductos, setListaProductos] = useState([]);
 
   useEffect(() => {
-    const cargarProductos = async () => {
-      try {
-        const respuesta = await fetch("http://localhost:3004/productos");
-        const productos = await respuesta.json();
-        setListaProductos(productos);
-      } catch (error) {
-        console.log("Error al cargar los productos:", error);
-      }
-    };
-
-    cargarProductos();
+    consultarAPI();
   }, []);
+
+  const consultarAPI = async () => {
+    const respuesta = await listarProductoAPI();
+    if (respuesta.status === 200) {
+      setListaProductos(respuesta.datos);
+    } else {
+      alert(`Error al cargar los productos: ${respuesta.error}`);
+    }
+  };
 
   return (
     <section className="container mainSection">
@@ -34,13 +34,14 @@ const Administrador = () => {
         <thead>
           <tr className="text-center">
             <th>ID</th>
-            <th>Producto</th>
+            <th>Gammer</th>
             <th>Precio</th>
             <th>Imagen</th>
             <th>Descripcion</th>
             <th>Categoría</th>
-            <th>Requisitos</th>
-            <th>Reseñas</th>
+            <th>Desarrollador</th>
+            <th>Reseña</th>
+            <th>Editar | Borrar</th>
           </tr>
         </thead>
         <tbody>
