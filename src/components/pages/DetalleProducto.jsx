@@ -58,7 +58,7 @@ const DetalleProducto = () => {
   return (
     // pasar el objeto por el id 
     <section className="container mt-5">
-      <article className="row justify-content-center">
+      <article className="row justify-content-center mt-5">
         <div className="col-12 col-md-8">
           <div className="card shadow-sm rounded">
             <div className="row g-0">
