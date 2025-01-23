@@ -2,7 +2,8 @@ import '../../style/CardProducto.css';
 
 const CardProducto = () => {
     return (
-        <div className='CardProducto'>
+        <a className='BotonDetalle' href="/DetalleProducto">
+            <div className='CardProducto'>
             <div className="CardImg">
             <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
             </div>
@@ -16,6 +17,7 @@ const CardProducto = () => {
                 <p>$522</p>
             </div>
         </div>
+        </a>
     );
 };
 
