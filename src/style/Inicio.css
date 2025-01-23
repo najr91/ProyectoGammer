@@ -1,7 +1,6 @@
 .PortadaInicio{
     height: 600px;
     width: 100%;
-    background-color: aqua;
     display: flex;
     align-items:center;
     background-image: url('https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt2e6f8da2c1562efc/672bd5a0ef121637f1bf6942/Template-Bnet-Launcher-CUI-Phoenix.jpg');
@@ -45,4 +44,41 @@
     border: 1px solid greenyellow;
     color: greenyellow;
 
+}
+
+@media screen and (max-width:599px) {
+    .ContainerInicio{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .ContainerInicio div{
+        width: 100%;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:991px) {
+    .ContainerInicio{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .ContainerInicio div{
+        width: 100%;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
