@@ -36,3 +36,14 @@
     color: greenyellow;
     transition: 1s ease;
 }
+
+@media screen and (max-width:599px){
+    .Container-TituloProducto{
+        margin-top: 30px;
+    }
+    
+    .Container-TituloProducto button{
+        padding: 8px 15px;
+        
+    }
+}
