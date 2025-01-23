@@ -11,10 +11,16 @@
     transition: 5s ease;
 }
 
+
 @keyframes nav-scroll {
     to{
         background-color: black;
     }
+}
+
+.ButtonLogin{
+    padding: 5px 30px;
+    background-color: greenyellow;
 }
 
 @media screen and (max-width: 599px){
