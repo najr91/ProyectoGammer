@@ -6,7 +6,6 @@ import Inicio from './components/pages/Inicio';
 import Menu from "./components/common/Menu"
 import Footer from "./components/common/Footer"
 import DetalleProducto from "./components/pages/DetalleProducto"
-import Inicio from "./components/pages/Inicio";
 import Administrador from "./components/pages/Administrador";
 import ErroR404 from "./components/pages/ErroR404";
 import FormularioProducto from "./components/Productos/FormularioProducto";
@@ -33,9 +32,6 @@ function App() {
          </Routes>
          <Footer/>
          </BrowserRouter>
-         
-        
-        
       </div>
     </>
   );
