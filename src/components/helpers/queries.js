@@ -46,3 +46,13 @@ export const borrarProductoAPI = async (id) => {
     return { status: 500, error: error.message, success: false };
   }
 };
+
+export const getProductoAPI = async (id) => {
+  try {
+    const respuesta = await fetch(`http://localhost:3001/Productos/${id}`);
+    return respuesta;
+  } catch (error) {
+    console.error("Error en getProductoAPI:", error);
+    throw error;
+  }
+};

@@ -20,7 +20,7 @@ const ItemProducto = ({ producto, setListaProductos }) => {
   return (
     <tr>
       <td className="text-center">{producto.id}</td>
-      <td>{producto.nombre}</td>
+      <td>{producto.nombreJuego}</td>
       <td className="text-end">{producto.precio}</td>
       <td className="text-center">
         <img

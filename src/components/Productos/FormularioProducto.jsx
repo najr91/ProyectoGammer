@@ -1,25 +1,60 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearProductoAPI } from "../helpers/queries";
-import { useNavigate } from "react-router";
+import { crearProductoAPI, getProductoAPI } from "../helpers/queries";
+import { useNavigate, useParams } from "react-router";
 
-const FormularioProducto = () => {
+const FormularioProducto = ({ crearProducto }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
+
+  const { id } = useParams();
   const navegacion = useNavigate();
 
+  useEffect(() => {
+    if (crearProducto === false) {
+      cargarProducto();
+    }
+  }, []);
+
+  const cargarProducto = async () => {
+    try {
+      const respuesta = await getProductoAPI(id);
+      const datos = await respuesta.json(); // Esta es la forma correcta
+      console.log("Datos a cargar:", datos);
+
+      if (respuesta.status === 200) {
+        setValue("nombreJuego", datos.nombreJuego);
+        setValue("precio", datos.precio);
+        setValue("imagen", datos.imagen);
+        setValue("categoria", datos.categoria);
+        setValue("descripcion_breve", datos.descripcion_breve);
+        setValue("descripcion_amplia", datos.descripcion_amplia);
+        setValue("desarrollador", datos.desarrollador);
+        setValue("JuegoSemanal", datos.JuegoSemanal);
+        setValue("TipoConsola", datos.TipoConsola);
+      }
+    } catch (error) {
+      console.error("Error al cargar el producto:", error);
+    }
+  };
+
   const onSubmit = async (producto) => {
-    const respuesta = await crearProductoAPI(producto);
-    if (respuesta.status === 201) {
-      alert("el producto se creo con exito");
-      reset();
+    if (crearProducto) {
+      const respuesta = await crearProductoAPI(producto);
+      if (respuesta.status === 201) {
+        alert("el producto se creo con exito");
+        reset();
+      } else {
+        alert("Ocurrio un error inesperado, intentelo mas tarde");
+      }
     } else {
-      alert("Ocurrio un error inesperado, intentelo mas tarde");
+      console.log("editoooooooooo");
     }
   };
 
