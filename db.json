@@ -1,0 +1,40 @@
+{
+  "Productos": [
+    {
+      "codigo": 231,
+      "nombre": "Producto ejemplo",
+      "precio": 25000,
+      "categoria": "Software",
+      "imagen": "ruta/a/la/imagen.jpg",
+      "descripcion": "Descripción detallada del producto.",
+      "requisitos_del_sistema": "Windows 10, 8GB RAM, 500MB de espacio libre",
+      "desarrollador": "Ejemplo Studios",
+      "reseñas": "4.5 de 5 estrellas",
+      "id": "8300"
+    },
+    {
+      "id": "a4cb",
+      "nombreJuego": "hweoirgefv",
+      "precio": "6545",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Sandbox",
+      "descripcion_breve": "4twrgsdfbvc ",
+      "descripcion_amplia": "54tergfvdx c",
+      "desarrollador": "ethywhr",
+      "JuegoSemanal": "No",
+      "TipoConsola": "wii"
+    },
+    {
+      "id": "4d13",
+      "nombreJuego": "culo",
+      "precio": "6342",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Multijugador",
+      "descripcion_breve": "holaa",
+      "descripcion_amplia": "trdf vcxgewfsdv",
+      "desarrollador": "lovooo",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "linux"
+    }
+  ]
+}
