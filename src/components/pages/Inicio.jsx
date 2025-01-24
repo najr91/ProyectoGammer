@@ -1,8 +1,20 @@
+import { useEffect, useState } from "react";
 import "../../style/Inicio.css";
 import Productos from "../Productos/Productos";
 import SliderPortada from "../Slider/SliderPortada";
+import { getProductos } from "../helpers/queriesProductos";
 
-const Inicio = () => {
+const Inicio = () => { 
+  // creamos un estado para guardar los productos
+  const [productos, setProductos] = useState([])
+
+  useEffect(() => {
+    getProductos().then((respuesta) => {
+      // actualizamos el estado como producto
+      setProductos(respuesta);
+    });
+  }, []);
+
   return (
     <div>
       <section>
@@ -25,7 +37,7 @@ const Inicio = () => {
             <SliderPortada></SliderPortada>
         </article>
         <article>
-          <Productos></Productos>
+          <Productos productos={productos}></Productos>
         </article>
       </section>
     </div>
