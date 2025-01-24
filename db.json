@@ -2,10 +2,10 @@
   "Productos": [
     {
       "codigo": 231,
-      "nombre": "Producto ejemplo",
+      "nombreJuego": "Final Fantasy",
       "precio": 25000,
       "categoria": "Software",
-      "imagen": "ruta/a/la/imagen.jpg",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "descripcion": "Descripción detallada del producto.",
       "requisitos_del_sistema": "Windows 10, 8GB RAM, 500MB de espacio libre",
       "desarrollador": "Ejemplo Studios",
