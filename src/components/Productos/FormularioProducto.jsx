@@ -11,7 +11,7 @@ const FormularioProducto = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const navegacion = useNavigate();
+  // const navegacion = useNavigate();
 
   const onSubmit = async (producto) => {
     const respuesta = await crearProductoAPI(producto);

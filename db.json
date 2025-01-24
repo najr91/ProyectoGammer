@@ -35,6 +35,18 @@
       "desarrollador": "lovooo",
       "JuegoSemanal": "Si",
       "TipoConsola": "linux"
+    },
+    {
+      "nombreJuego": "League of leguend",
+      "precio": "15000",
+      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
+      "categoria": "Accion",
+      "descripcion_breve": "dadawdawdawdawdaw",
+      "descripcion_amplia": "dawdawdawdawdawdawdawdawdawd",
+      "desarrollador": "wadawdawd",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "windows",
+      "id": "3EtvOYZ"
     }
   ]
 }
