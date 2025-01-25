@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../style/detalleProducto.css";
+import { obtenerJuegos } from "../helpers/queriesProductos";
+import { useParams } from 'react-router-dom';
+
 
 const DetalleProducto = () => {
   const [Estrellas, setEstrellas] = useState(0);
@@ -18,10 +21,12 @@ const DetalleProducto = () => {
     {
       user: "José Martinéz",
       text: "No me gusto, le falta mas opciones para modificar los personajes.",
-      Estrellas:2,
-    }
+      Estrellas: 2,
+    },
   ]);
   const [hoveredEstrella, setHoveredEstrella] = useState(0);
+
+  const [juegos, setJuegos] = useState({})
 
   const handleComentarioChange = (event) => {
     setComentario(event.target.value);
@@ -55,8 +60,23 @@ const DetalleProducto = () => {
     setHoveredEstrella(0);
   };
 
+  const {id} = useParams()
+
+  useEffect(() => {
+    obtenerJuego();
+  }, []);
+
+  const obtenerJuego = async () => {
+    const respuesta = await obtenerJuegos(id);
+    if (respuesta.status === 200) {
+      const datos = await respuesta.json();
+      setJuegos(datos);
+    } else {
+      alert("Ocurrio un error intente mas tarde");
+    }
+  };
+
   return (
-    // pasar el objeto por el id 
     <section className="container mt-5">
       <article className="row justify-content-center mt-5">
         <div className="col-12 col-md-8">
@@ -84,7 +104,9 @@ const DetalleProducto = () => {
                   <div className="d-flex justify-content-between align-items-center">
                     <b className="text-success">Disponible</b>
                     {/* error 404 */}
-                    <button className="btn btn-outline-dark">Añadir al carrito</button>
+                    <button className="btn btn-outline-dark">
+                      Añadir al carrito
+                    </button>
                   </div>
                 </div>
               </div>
@@ -97,7 +119,9 @@ const DetalleProducto = () => {
                   <b
                     key={star}
                     className={`Estrella ${
-                      Estrellas >= star || hoveredEstrella >= star ? "filled" : ""
+                      Estrellas >= star || hoveredEstrella >= star
+                        ? "filled"
+                        : ""
                     } fs-3 `}
                     onClick={() => handleEstrellasChange(star)}
                     onMouseEnter={() => handleMouseEnter(star)}
@@ -144,4 +168,3 @@ const DetalleProducto = () => {
 };
 
 export default DetalleProducto;
-
