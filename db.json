@@ -1,15 +1,15 @@
 {
   "Productos": [
     {
-      "codigo": 231,
       "nombreJuego": "Final Fantasy",
       "precio": 25000,
-      "categoria": "Software",
       "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "descripcion": "Descripción detallada del producto.",
-      "requisitos_del_sistema": "Windows 10, 8GB RAM, 500MB de espacio libre",
+      "categoria": "Aventura",
+      "descripcion_breve": "wadawdawdawdaw",
+      "descripcion_amplia": "dwadadawdawdawdawdawdawdawdaw",
       "desarrollador": "Ejemplo Studios",
-      "reseñas": "4.5 de 5 estrellas",
+      "JuegoSemanal": "No",
+      "TipoConsola": "switch",
       "id": "8300"
     },
     {
