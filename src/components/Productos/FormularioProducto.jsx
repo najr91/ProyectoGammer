@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearProductoAPI, getProductoAPI } from "../helpers/queries";
+import {
+  crearProductoAPI,
+  editarProductoAPI,
+  getProductoAPI,
+} from "../helpers/queries";
 import { useNavigate, useParams } from "react-router";
 
 const FormularioProducto = ({ crearProducto }) => {
@@ -54,7 +58,13 @@ const FormularioProducto = ({ crearProducto }) => {
         alert("Ocurrio un error inesperado, intentelo mas tarde");
       }
     } else {
-      console.log("editoooooooooo");
+      const respuesta = await editarProductoAPI(producto, id);
+      if (respuesta.status === 200) {
+        alert("El producto fue actualizado");
+        navegacion("/administrador");
+      } else {
+        alert("Ocurrio un error al editar , intente mas tarde");
+      }
     }
   };
 
