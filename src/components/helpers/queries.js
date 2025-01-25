@@ -29,3 +29,20 @@ export const listarProductoAPI = async () => {
     return { status: 500, error: error.message };
   }
 };
+
+export const borrarProductoAPI = async (id) => {
+  try {
+    console.log("Intentando borrar producto con ID:", id);
+    const respuesta = await fetch("http://localhost:3001/Productos/" + id, {
+      method: "DELETE",
+    });
+
+    if (!respuesta.ok) {
+      throw new Error(`Error HTTP: ${respuesta.status}`);
+    }
+    return { status: respuesta.status, success: true };
+  } catch (error) {
+    console.error("Error en borrarProductoAPI:", error);
+    return { status: 500, error: error.message, success: false };
+  }
+};

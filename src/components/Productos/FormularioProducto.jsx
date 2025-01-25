@@ -24,8 +24,8 @@ const FormularioProducto = () => {
   };
 
   return (
-    <section className="container mainSection">
-      <h1 className="display-4 mt-5">Administrar Juego</h1>
+    <section className="container mainSection my-5">
+      <h1 className="display-4 my-5">Administrar Juego</h1>
       <hr />
       <Form className="my-4" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreJuego">
