@@ -14,7 +14,6 @@ export const getProductos = async ()=> {
 export const obtenerJuegos = async (id) => {
    try {
      const respuesta = await fetch("http://localhost:3001/productos/" + id);
-     console.log(respuesta);
      return respuesta;
    } catch (error) {
      console.error(error);
