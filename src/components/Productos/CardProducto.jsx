@@ -10,9 +10,9 @@ const CardProducto = ({ productosItem }) => {
                 </div>
                 <div className="BodyCard container mt-4">
                     <div className="consola my-3">
-                        <span>PS5</span>
-                        <span>XB1</span>
-                        <span>PC</span>
+                        <b>PS5</b>
+                        <b>XB1</b>
+                        <b>PC</b>
                     </div>
                     <h5>{productosItem.nombreJuego}</h5>
                     <p>${productosItem.precio}</p>

@@ -19,7 +19,7 @@ function App() {
         <Menu></Menu>
          <Routes>
           <Route path='/' element={<Inicio></Inicio>}></Route>
-          <Route path='/DetalleProducto' element={<DetalleProducto></DetalleProducto>}></Route>
+          <Route path='/DetalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
           <Route
               path="/administrador"
               element={<Administrador></Administrador>}
