@@ -22,9 +22,9 @@ const Administrador = () => {
   };
 
   return (
-    <section className="container mainSection">
+    <section className="container mainSection mt-5">
       <div className="d-flex justify-content-between align-items-center mt-5">
-        <h1 className="display-4">Juegos Disponibles</h1>
+        <h1 className="display-4 text-white ">Juegos Disponibles</h1>
         <Link className="btn btn-primary" to="/administrador/crear">
           <i className="bi bi-file-earmark-plus"></i>
         </Link>
