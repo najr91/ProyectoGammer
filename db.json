@@ -1,5 +1,4 @@
 {
-
   "Productos": [
     {
       "codigo": 231,
@@ -26,16 +25,16 @@
       "TipoConsola": "wii"
     },
     {
-      "id": "4d13",
-      "nombreJuego": "culo",
-      "precio": "6342",
-      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "Multijugador",
-      "descripcion_breve": "holaa",
-      "descripcion_amplia": "trdf vcxgewfsdv",
-      "desarrollador": "lovooo",
-      "JuegoSemanal": "Si",
-      "TipoConsola": "linux"
+      "nombreJuego": "ark ",
+      "precio": "23000",
+      "imagen": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1113410/capsule_616x353.jpg?t=1622858339",
+      "categoria": "Aventura",
+      "descripcion_breve": "assfswadadawdasdaweaw",
+      "descripcion_amplia": "dawdawdawdawdawdawasdawdawda",
+      "desarrollador": "wdawadawd",
+      "JuegoSemanal": "No",
+      "TipoConsola": "xbox-series-x",
+      "id": "HVrL6n1"
     }
   ]
 }
