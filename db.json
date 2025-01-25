@@ -36,6 +36,31 @@
       "desarrollador": "lovooo",
       "JuegoSemanal": "Si",
       "TipoConsola": "linux"
+
+    },
+    {
+      "nombreJuego": "horaculo",
+      "precio": "7787",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Sandbox",
+      "descripcion_breve": "tehbdgv cw4tshrg",
+      "descripcion_amplia": "5hyrfbx crhgbf c",
+      "desarrollador": "GRDVBSGFD",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "switch",
+      "id": "f428"
+    },
+    {
+      "nombreJuego": "mineral",
+      "precio": "6433",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Indie",
+      "descripcion_breve": "3rfevfds cfs",
+      "descripcion_amplia": "3fwrasdvzerg",
+      "desarrollador": "hoisfc ",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "xbox-classic",
+      "id": "c34e"
     }
   ]
 }
