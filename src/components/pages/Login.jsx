@@ -27,7 +27,12 @@ const Login = ({ setusuarioLogeado }) => {
       navegacion("/administrador"); 
       reset();
     } else {
-      alert("El usuario no existe");
+      Swal.fire({
+        title: "El usuario o la contraseña son incorrecta, intentalo de nuevo.!",
+        text: "continuar",
+        icon: "error",
+        confirmButtonText: "ok",
+      });
     }
   };
 
