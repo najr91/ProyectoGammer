@@ -1,11 +1,11 @@
 import '../../style/CardProducto.css';
 
-const CardProducto = () => {
+const CardProducto = ({productosItem}) => {
     return (
         <a className='BotonDetalle' href="/DetalleProducto">
             <div className='CardProducto'>
             <div className="CardImg">
-            <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
+            <img src={productosItem.imagen} />
             </div>
             <div className="BodyCard container mt-4">
             <div className="consola my-3">
@@ -13,8 +13,8 @@ const CardProducto = () => {
                     <span>XB1</span>
                     <span>PC</span>
                 </div>
-                <h5>Final Fantasy</h5>
-                <p>$522</p>
+                <h5>{productosItem.nombreJuego}</h5>
+                <p>${productosItem.precio}</p>
             </div>
         </div>
         </a>
