@@ -1,8 +1,8 @@
-import { Navbar, Nav, Container, NavLink } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import "../../style/Menu.css";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useNavigate } from "react-router-dom"; 
+import { NavLink,useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 const Menu = ({ usuarioLogeado, setusuarioLogeado }) => {
@@ -25,7 +25,7 @@ const Menu = ({ usuarioLogeado, setusuarioLogeado }) => {
             <Nav.Link href="/Contactos">Contactos</Nav.Link>
             {usuarioLogeado && usuarioLogeado.length > 0 ? (
               <>
-                <NavLink className="nav-link" to={"/Administrador"}>
+                <NavLink className="nav-link" to="/administrador">
                   Administrador
                 </NavLink>
                 <Nav.Item>
