@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';  // Asegúrate de importar desde 'react-router-dom'
-import '../../style/CardProducto.css';  // Este import sigue siendo necesario
+import { Link } from 'react-router-dom';  
+import '../../style/CardProducto.css';  
 
 const CardProducto = ({ productosItem }) => {
     return (
-        <Link to="/DetalleProducto" className="BotonDetalle">
+        <Link to={"/DetalleProducto/"+ productosItem.id} className="BotonDetalle">
             <div className="CardProducto">
                 <div className="CardImg">
                     <img src={productosItem.imagen} alt={productosItem.nombreJuego} />
