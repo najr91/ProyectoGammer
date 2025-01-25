@@ -6,7 +6,7 @@ import {
   editarProductoAPI,
   getProductoAPI,
 } from "../helpers/queries";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate,useParams } from "react-router-dom";
 
 const FormularioProducto = ({ crearProducto }) => {
   const {
@@ -18,7 +18,7 @@ const FormularioProducto = ({ crearProducto }) => {
   } = useForm();
 
   const { id } = useParams();
-  // const navegacion = useNavigate();
+  const navegacion = useNavigate();
 
   useEffect(() => {
     if (crearProducto === false) {
