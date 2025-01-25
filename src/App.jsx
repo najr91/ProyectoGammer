@@ -20,7 +20,7 @@ function App() {
     <>
       <div className='App'>
         <BrowserRouter>
-        <Menu></Menu>
+        <Menu setusuarioLogeado={setusuarioLogeado} usuarioLogeado={usuarioLogeado}></Menu>
          <Routes>
           <Route path='/' element={<Inicio></Inicio>}></Route>
           <Route path='/DetalleProducto' element={<DetalleProducto></DetalleProducto>}></Route>
