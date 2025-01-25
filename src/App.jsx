@@ -9,7 +9,7 @@ import DetalleProducto from "./components/pages/DetalleProducto"
 import Administrador from "./components/pages/Administrador";
 import ErroR404 from "./components/pages/ErroR404";
 import FormularioProducto from "./components/Productos/FormularioProducto";
-
+import Login from "./components/pages/Login"
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
               element={<FormularioProducto />}
             ></Route>
             <Route path="*" element={<ErroR404 />}></Route>
+            <Route path="/login" element={<Login></Login>}></Route>
          </Routes>
          <Footer/>
          </BrowserRouter>

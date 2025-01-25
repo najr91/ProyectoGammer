@@ -13,7 +13,7 @@ const Menu = () => {
             <Nav.Link href="/">Inicio</Nav.Link>
             <Nav.Link href="/Nosotros">Sobre Nosotros</Nav.Link>
             <Nav.Link href="/Contactos">Contactos</Nav.Link>
-            <Link to="/login" style={{ textDecoration: "none" }}>
+            <Link to="/login">
       <button className="ButtonLogin">Ir a Login</button>
     </Link>
           </Nav>
