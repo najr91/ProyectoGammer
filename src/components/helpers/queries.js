@@ -29,3 +29,17 @@ export const listarProductoAPI = async () => {
     return { status: 500, error: error.message };
   }
 };
+
+const userAdmin ={
+  email:'administrador@123.com',
+  password:'123456789'
+} 
+
+export const login = (usuario)=>{
+  if(usuario.email === userAdmin.email && usuario.password === userAdmin.password){
+    sessionStorage.setItem('userKey', JSON.stringify(userAdmin.email))
+    return true
+  }else{
+    return false
+  }
+}
