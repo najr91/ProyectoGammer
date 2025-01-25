@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom"; 
-
+import { login } from "../helpers/queries";
 
 const Login = ({ setusuarioLogeado }) => {
     const {
@@ -18,7 +18,11 @@ const Login = ({ setusuarioLogeado }) => {
     console.log(usuario);
     if (login(usuario)) {
       setusuarioLogeado(usuario.email);
-      alert("Bienvenido");
+      Swal.fire({
+        title: "El usuario se registro con exito!",
+        icon: "success",
+        draggable: false,
+      });
       navegacion("/administrador"); 
       reset();
     } else {
