@@ -46,3 +46,30 @@ export const borrarProductoAPI = async (id) => {
     return { status: 500, error: error.message, success: false };
   }
 };
+
+export const getProductoAPI = async (id) => {
+  try {
+    const respuesta = await fetch(`http://localhost:3001/Productos/${id}`);
+    return respuesta;
+  } catch (error) {
+    console.error("Error en getProductoAPI:", error);
+  }
+};
+
+export const editarProductoAPI = async (producto, id) => {
+  try {
+    const respuesta = await fetch("http://localhost:3001/Productos/" + id, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(producto),
+    });
+    if (!respuesta.ok) {
+      throw new Error(`Error HTTP: ${respuesta.status}`);
+    }
+    const datos = await respuesta.json();
+    return { status: respuesta.status, datos };
+  } catch (error) {
+    console.error("Error en editarProductoAPI:", error);
+    return { status: 500, error: error.message };
+  }
+};
