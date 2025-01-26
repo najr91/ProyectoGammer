@@ -62,12 +62,9 @@ const DetalleProducto = () => {
 
   const { id } = useParams();
 
-  useEffect(() => {
-    obtenerJuego();
-  }, []);
-
   const obtenerJuego = async () => {
-    const respuesta = await obtenerJuegos(id);
+    
+  const respuesta = await obtenerJuegos(id);
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
       setJuegos(datos);
@@ -75,6 +72,12 @@ const DetalleProducto = () => {
       alert("Ocurrio un error intente mas tarde");
     }
   };
+
+  useEffect(() => {
+    obtenerJuego();
+  }, []);
+
+  
 
   return (
     <section className="container mt-5">

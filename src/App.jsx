@@ -29,10 +29,6 @@ function App() {
               element={<DetalleProducto></DetalleProducto>}
             ></Route>
             <Route
-              path="/DetalleProducto"
-              element={<DetalleProducto></DetalleProducto>}
-            ></Route>
-            <Route
               path="/administrador"
               element={<Administrador></Administrador>}
             ></Route>
