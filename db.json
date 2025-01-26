@@ -44,8 +44,7 @@
       "descripcion_breve": "tehbdgv cw4tshrg",
       "descripcion_amplia": "5hyrfbx crhgbf c",
       "desarrollador": "GRDVBSGFD",
-      "JuegoSemanal": "Si",
-     < DetalleProducto
+            "JuegoSemanal": "Si",
       "TipoConsola": "linux"
     },
     {
@@ -59,9 +58,6 @@
       "JuegoSemanal": "Si",
       "TipoConsola": "windows",
       "id": "3EtvOYZ"
-=======
-      "TipoConsola": "switch",
-      "id": "f428"
     },
     {
       "nombreJuego": "mineral",
@@ -86,7 +82,7 @@
       "JuegoSemanal": "No",
       "TipoConsola": "xbox-series-x",
       "id": "HVrL6n1"
- dev
+
     }
   ]
 }
