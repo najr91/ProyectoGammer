@@ -1,8 +1,22 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { borrarProductoAPI, listarProductoAPI } from "../helpers/queries";
 
-const ItemProducto = ({ producto }) => {
+const ItemProducto = ({ producto, setListaProductos }) => {
+  const borrarProducto = async () => {
+    const respuesta = await borrarProductoAPI(producto.id);
+    if (respuesta.status === 200) {
+      const respListaProductos = await listarProductoAPI();
+      if (respListaProductos.status === 200) {
+        setListaProductos(respListaProductos.datos);
+        alert("El producto se eliminó con exito");
+      } else {
+        alert("Ocurrio un error , intente más tarde");
+      }
+    }
+  };
+
   return (
     <tr>
       <td className="text-center">{producto.id}</td>
@@ -28,7 +42,7 @@ const ItemProducto = ({ producto }) => {
         >
           <i className="bi bi-pencil-square"></i>
         </Link>
-        <Button variant="danger">
+        <Button variant="danger" onClick={borrarProducto}>
           <i className="bi bi-trash"></i>
         </Button>
       </td>
