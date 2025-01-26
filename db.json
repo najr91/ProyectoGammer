@@ -13,8 +13,43 @@
       "id": "8300"
     },
     {
+      "id": "a4cb",
+      "nombreJuego": "hweoirgefv",
+      "precio": "6545",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Sandbox",
+      "descripcion_breve": "4twrgsdfbvc ",
+      "descripcion_amplia": "54tergfvdx c",
+      "desarrollador": "ethywhr",
+      "JuegoSemanal": "No",
+      "TipoConsola": "wii"
+    },
+    {
+      "nombreJuego": "culo",
+      "precio": "6342",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Multijugador",
+      "descripcion_breve": "holaa",
+      "descripcion_amplia": "trdf vcxgewfsdv",
+      "desarrollador": "lovooo",
+      "JuegoSemanal": "No",
+      "TipoConsola": "linux",
+      "id": "4d13"
+    },
+    {
+      "nombreJuego": "horaculo",
+      "precio": "7787",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Sandbox",
+      "descripcion_breve": "tehbdgv cw4tshrg",
+      "descripcion_amplia": "5hyrfbx crhgbf c",
+      "desarrollador": "GRDVBSGFD",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "linux"
+    },
+    {
       "nombreJuego": "League of leguend",
-      "precio": "15999",
+      "precio": "15000",
       "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
       "categoria": "Accion",
       "descripcion_breve": "dadawdawdawdawdaw",
@@ -47,30 +82,6 @@
       "JuegoSemanal": "No",
       "TipoConsola": "xbox-series-x",
       "id": "HVrL6n1"
-    },
-    {
-      "nombreJuego": "SallyFace",
-      "precio": "9000",
-      "imagen": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/541570/header.jpg?t=1667000571",
-      "categoria": "Terror",
-      "descripcion_breve": "dwdawdawdawd",
-      "descripcion_amplia": "awdawdawdawdawd",
-      "desarrollador": "dasdewdadawd",
-      "JuegoSemanal": "Si",
-      "TipoConsola": "windows",
-      "id": "qSmLsPT"
-    },
-    {
-      "nombreJuego": "Mortal Kombat X",
-      "precio": "23000",
-      "imagen": "https://i.blogs.es/2f03c7/mk/1366_2000.jpg",
-      "categoria": "Lucha",
-      "descripcion_breve": "awdawdasdawdawsw",
-      "descripcion_amplia": "dawdasdawdsdawd",
-      "desarrollador": "asdsadwdsda",
-      "JuegoSemanal": "No",
-      "TipoConsola": "ps4",
-      "id": "NU3U6NH"
     }
   ]
 }

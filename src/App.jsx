@@ -20,7 +20,6 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-          DetalleProducto
           <Menu setusuarioLogeado={setusuarioLogeado} usuarioLogeado={usuarioLogeado}></Menu>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
@@ -28,10 +27,10 @@ function App() {
               path="/DetalleProducto/:id"
               element={<DetalleProducto></DetalleProducto>}
             ></Route>
-            <Route
+            {/* <Route
               path="/DetalleProducto"
               element={<DetalleProducto></DetalleProducto>}
-            ></Route>
+            ></Route> */}
             <Route
               path="/administrador"
               element={<Administrador></Administrador>}
