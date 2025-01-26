@@ -45,6 +45,21 @@
       "descripcion_amplia": "5hyrfbx crhgbf c",
       "desarrollador": "GRDVBSGFD",
       "JuegoSemanal": "Si",
+     < DetalleProducto
+      "TipoConsola": "linux"
+    },
+    {
+      "nombreJuego": "League of leguend",
+      "precio": "15000",
+      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
+      "categoria": "Accion",
+      "descripcion_breve": "dadawdawdawdawdaw",
+      "descripcion_amplia": "dawdawdawdawdawdawdawdawdawd",
+      "desarrollador": "wadawdawd",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "windows",
+      "id": "3EtvOYZ"
+=======
       "TipoConsola": "switch",
       "id": "f428"
     },
@@ -71,6 +86,7 @@
       "JuegoSemanal": "No",
       "TipoConsola": "xbox-series-x",
       "id": "HVrL6n1"
+ dev
     }
   ]
 }

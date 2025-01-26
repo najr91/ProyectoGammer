@@ -20,6 +20,13 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
+ DetalleProducto
+        <Menu></Menu>
+         <Routes>
+          <Route path='/' element={<Inicio></Inicio>}></Route>
+          <Route path='/DetalleProducto/:id' element={<DetalleProducto></DetalleProducto>}></Route>
+          <Route
+=======
           <Menu setusuarioLogeado={setusuarioLogeado} usuarioLogeado={usuarioLogeado}></Menu>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
@@ -28,6 +35,7 @@ function App() {
               element={<DetalleProducto></DetalleProducto>}
             ></Route>
             <Route
+>>>>> dev
               path="/administrador"
               element={<Administrador></Administrador>}
             ></Route>

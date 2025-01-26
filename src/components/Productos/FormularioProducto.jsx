@@ -17,9 +17,13 @@ const FormularioProducto = ({ crearProducto }) => {
     reset,
     setValue,
   } = useForm();
+< DetalleProducto
+  // const navegacion = useNavigate();
+=======
 
   const { id } = useParams();
   const navegacion = useNavigate();
+>>>> dev
 
   useEffect(() => {
     if (crearProducto === false) {
@@ -70,10 +74,15 @@ const FormularioProducto = ({ crearProducto }) => {
   };
 
   return (
+< DetalleProducto
+    <section className="container mainSection">
+      <h1 className="display-4 mt-5 text-white border-bottom">Administrar Juego</h1>
+=======
     <section className="container mainSection my-5">
       <h1 className="display-4 my-5">Administrar Juego</h1>
+> dev
       <hr />
-      <Form className="my-4" onSubmit={handleSubmit(onSubmit)}>
+      <Form className="my-4 bg-white rounded-3 p-4" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreJuego">
           <Form.Label>Juego*</Form.Label>
           <Form.Control
