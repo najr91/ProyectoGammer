@@ -42,7 +42,7 @@ const Login = ({ setusuarioLogeado }) => {
         <p className="text-center mt-3">Login</p>
         <form onSubmit={handleSubmit(despuesForm)}>
           <Form.Group className="mb-3 w-75 mx-auto" controlId="Email">
-            <Form.Label>Email</Form.Label>
+            <Form.Label className="text-black">Email</Form.Label>
             <Form.Control
               {...register("email", {
                 required: "Este campo es obligatorio",
@@ -65,7 +65,7 @@ const Login = ({ setusuarioLogeado }) => {
           </Form.Group>
 
           <Form.Group className="mb-3 w-75 mx-auto" controlId="pasword">
-            <Form.Label>Contraseña</Form.Label>
+            <Form.Label className="text-black">Contraseña</Form.Label>
             <Form.Control
               {...register("password", {
                 required: "Este campo es obligatorio",
