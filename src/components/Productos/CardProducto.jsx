@@ -3,7 +3,7 @@ import '../../style/CardProducto.css';
 
 const CardProducto = ({ productosItem }) => {
     return (
-        <Link to={"/DetalleProducto/"+ productosItem.id} className="BotonDetalle">
+        <a href={"/DetalleProducto/"+ productosItem.id} className="BotonDetalle">
             <div className="CardProducto">
                 <div className="CardImg">
                     <img src={productosItem.imagen} alt={productosItem.nombreJuego} />
@@ -18,7 +18,7 @@ const CardProducto = ({ productosItem }) => {
                     <p>${productosItem.precio}</p>
                 </div>
             </div>
-        </Link>
+        </a>
     );
 };
 
