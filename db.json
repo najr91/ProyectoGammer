@@ -1,15 +1,15 @@
 {
   "Productos": [
     {
-      "codigo": 231,
       "nombreJuego": "Final Fantasy",
       "precio": 25000,
-      "categoria": "Software",
       "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "descripcion": "Descripción detallada del producto.",
-      "requisitos_del_sistema": "Windows 10, 8GB RAM, 500MB de espacio libre",
+      "categoria": "Aventura",
+      "descripcion_breve": "wadawdawdawdaw",
+      "descripcion_amplia": "dwadadawdawdawdawdawdawdawdaw",
       "desarrollador": "Ejemplo Studios",
-      "reseñas": "4.5 de 5 estrellas",
+      "JuegoSemanal": "No",
+      "TipoConsola": "switch",
       "id": "8300"
     },
     {
@@ -25,7 +25,6 @@
       "TipoConsola": "wii"
     },
     {
-      "id": "4d13",
       "nombreJuego": "culo",
       "precio": "6342",
       "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -33,8 +32,45 @@
       "descripcion_breve": "holaa",
       "descripcion_amplia": "trdf vcxgewfsdv",
       "desarrollador": "lovooo",
+      "JuegoSemanal": "No",
+      "TipoConsola": "linux",
+      "id": "4d13"
+    },
+    {
+      "nombreJuego": "horaculo",
+      "precio": "7787",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Sandbox",
+      "descripcion_breve": "tehbdgv cw4tshrg",
+      "descripcion_amplia": "5hyrfbx crhgbf c",
+      "desarrollador": "GRDVBSGFD",
       "JuegoSemanal": "Si",
-      "TipoConsola": "linux"
+      "TipoConsola": "switch",
+      "id": "f428"
+    },
+    {
+      "nombreJuego": "mineral",
+      "precio": "6433",
+      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "Indie",
+      "descripcion_breve": "3rfevfds cfs",
+      "descripcion_amplia": "3fwrasdvzerg",
+      "desarrollador": "hoisfc ",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "xbox-classic",
+      "id": "c34e"
+    },
+    {
+      "nombreJuego": "ark ",
+      "precio": "23000",
+      "imagen": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1113410/capsule_616x353.jpg?t=1622858339",
+      "categoria": "Aventura",
+      "descripcion_breve": "assfswadadawdasdaweaw",
+      "descripcion_amplia": "dawdawdawdawdawdawasdawdawda",
+      "desarrollador": "wdawadawd",
+      "JuegoSemanal": "No",
+      "TipoConsola": "xbox-series-x",
+      "id": "HVrL6n1"
     }
   ]
 }
