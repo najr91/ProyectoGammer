@@ -9,13 +9,18 @@ import DetalleProducto from "./components/pages/DetalleProducto";
 import Administrador from "./components/pages/Administrador";
 import ErroR404 from "./components/pages/ErroR404";
 import FormularioProducto from "./components/Productos/FormularioProducto";
+import Login from "./components/pages/Login"
+import { useState } from "react";
 
 function App() {
+  const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
+  const [usuarioLogeado, setusuarioLogeado] = useState(usuario); 
+
   return (
     <>
       <div className="App">
         <BrowserRouter>
-          <Menu></Menu>
+          <Menu setusuarioLogeado={setusuarioLogeado} usuarioLogeado={usuarioLogeado}></Menu>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
             <Route
@@ -35,7 +40,8 @@ function App() {
               element={<FormularioProducto crearProducto={false} />}
             ></Route>
             <Route path="*" element={<ErroR404 />}></Route>
-          </Routes>
+             <Route path="/login" element={<Login setusuarioLogeado={setusuarioLogeado}></Login>}></Route>
+         </Routes>
           <Footer />
         </BrowserRouter>
       </div>
