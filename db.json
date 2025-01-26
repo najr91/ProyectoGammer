@@ -59,6 +59,18 @@
       "JuegoSemanal": "Si",
       "TipoConsola": "windows",
       "id": "qSmLsPT"
+    },
+    {
+      "nombreJuego": "Mortal Kombat X",
+      "precio": "23000",
+      "imagen": "https://i.blogs.es/2f03c7/mk/1366_2000.jpg",
+      "categoria": "Lucha",
+      "descripcion_breve": "awdawdasdawdawsw",
+      "descripcion_amplia": "dawdasdawdsdawd",
+      "desarrollador": "asdsadwdsda",
+      "JuegoSemanal": "No",
+      "TipoConsola": "ps4",
+      "id": "NU3U6NH"
     }
   ]
 }
