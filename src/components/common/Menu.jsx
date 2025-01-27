@@ -22,6 +22,7 @@ const Menu = ({ usuarioLogeado, setusuarioLogeado }) => {
           <Nav className="ms-auto">
             <Nav.Link href="/">Inicio</Nav.Link>
             <Nav.Link href="/Nosotros">Sobre Nosotros</Nav.Link>
+            <Nav.Link href="/Carrito">Carrito</Nav.Link>
             <Nav.Link href="/Contactos">Contactos</Nav.Link>
             {usuarioLogeado && usuarioLogeado.length > 0 ? (
               <>
