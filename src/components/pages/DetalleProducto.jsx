@@ -174,6 +174,9 @@ const DetalleProducto = () => {
                     onChange={handleComentarioChange}
                   />
                 </div>
+                <button type="submit" className="btn btn-primary">
+                  Enviar Comentario
+                </button>
               </form>
 
               <div className="Comentarios-list mt-4">
