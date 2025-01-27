@@ -25,9 +25,8 @@ const Carrito = ({ carrito }) => {
                       <h5 className="text-success">
                         ${parseFloat(producto.precio).toLocaleString()}
                       </h5>
-                      {/* Alineación del botón a la derecha */}
                       <div className="d-flex justify-content-end">
-                        <Button variant="danger" className="w-25 mt-2">
+                        <Button variant="danger" className="w-25 mt-2 w-100">
                           Eliminar del carrito
                         </Button>
                       </div>
@@ -41,8 +40,6 @@ const Carrito = ({ carrito }) => {
           <p className="text-center w-100">No tienes productos en el carrito.</p>
         )}
       </Row>
-
-      {/* Si hay productos en el carrito, mostrar el total */}
       {carrito.length > 0 && (
         <div className="d-flex justify-content-between align-items-center mt-4">
           <h4>
