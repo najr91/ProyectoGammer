@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../../style/detalleProducto.css";
 import { obtenerJuegos } from "../helpers/queriesProductos";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Fire } from "react-bootstrap-icons";
 
-const DetalleProducto = () => {
+const DetalleProducto = ({ agregarAlCarrito }) => {  
   const [Estrellas, setEstrellas] = useState(0);
   const [Comentario, setComentario] = useState("");
   const [ComentariosList, setComentariosList] = useState([
@@ -25,8 +25,8 @@ const DetalleProducto = () => {
     },
   ]);
   const [hoveredEstrella, setHoveredEstrella] = useState(0);
-
   const [juegos, setJuegos] = useState({});
+  const { id } = useParams();
 
   const handleComentarioChange = (event) => {
     setComentario(event.target.value);
@@ -60,7 +60,6 @@ const DetalleProducto = () => {
     setHoveredEstrella(0);
   };
 
-  const { id } = useParams();
 
   const obtenerJuego = async () => {
     const respuesta = await obtenerJuegos(id);
@@ -71,20 +70,19 @@ const DetalleProducto = () => {
       alert("Ocurrio un error intente mas tarde");
     }
   };
-  
 
   useEffect(() => {
     obtenerJuego();
-  }, []);
-
+  }, []);  
+ 
   const agregarAlCarritoHandler = () => {
     const producto = {
       id: juegos.id,
       nombreJuego: juegos.nombreJuego,
-      precio: juegos.precio, 
+      precio: juegos.precio,
       imagen: juegos.imagen,
     };
-
+    console.log(producto)
     agregarAlCarrito(producto); 
   };
 
@@ -122,20 +120,19 @@ const DetalleProducto = () => {
                       <>
                         <b>
                           Juego semanal
-                          <Fire className="ms-1 text-danger" /> 
+                          <Fire className="ms-1 text-danger" />
                         </b>
                       </>
                     )}
                   </div>
                   <div className="d-flex justify-content-between align-items-center">
                     <b className="text-success">Disponible</b>
-                    {/* error 404 */}
                     <button
-                  onClick={agregarAlCarritoHandler}
-                  className="btn btn-outline-dark"
-                >
-                  Añadir al carrito
-                </button>
+                      onClick={agregarAlCarritoHandler}
+                      className="btn btn-outline-dark"
+                    >
+                      Añadir al carrito
+                    </button>
                   </div>
                 </div>
               </div>
@@ -197,3 +194,4 @@ const DetalleProducto = () => {
 };
 
 export default DetalleProducto;
+
