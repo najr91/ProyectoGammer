@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { obtenerJuegos } from "../helpers/queriesProductos";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Fire } from "react-bootstrap-icons";
+import Swal from "sweetalert2";
 import "../../style/detalleProducto.css";
 
 const DetalleProducto = ({ agregarAlCarrito, carrito }) => {
@@ -73,6 +74,7 @@ const DetalleProducto = ({ agregarAlCarrito, carrito }) => {
     obtenerJuego();
   }, []);
 
+  const navegacion = useNavigate()
 
   const productoEnCarrito = carrito.find((producto) => producto.id === juegos.id);
 
@@ -83,6 +85,12 @@ const DetalleProducto = ({ agregarAlCarrito, carrito }) => {
       precio: juegos.precio,
       imagen: juegos.imagen,
     };
+    Swal.fire({
+            title: "Se agrego el producto al carrito!",
+            icon: "success",
+            draggable: false,
+          });
+    navegacion("/")
     agregarAlCarrito(producto);
   };
 

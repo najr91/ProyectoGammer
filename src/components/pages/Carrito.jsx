@@ -1,26 +1,38 @@
 import React from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
+import Swal from "sweetalert2";
 
-const Carrito = ({ carrito, setCarrito  }) => {
-  const total = carrito.reduce((acc, producto) => acc + parseFloat(producto.precio), 0);
+const Carrito = ({ carrito, setCarrito }) => {
+  const total = carrito.reduce(
+    (acc, producto) => acc + parseFloat(producto.precio),
+    0
+  );
 
   const eliminarDelCarrito = (id) => {
     const carritoActualizado = carrito.filter((producto) => producto.id !== id);
-    setCarrito(carritoActualizado); 
+     Swal.fire({
+            title: "El producto ah sido eliminado del carrito!",
+            icon: "success",
+            draggable: false,
+          });
+    setCarrito(carritoActualizado);
   };
   return (
     <section className="container mt-5">
       <h3 className="text-center mb-4">Tu Carrito de Compras</h3>
 
-      
-      <Row className="g-3"> 
+      <Row className="g-3">
         {carrito.length > 0 ? (
           carrito.map((producto, index) => (
             <Col md={12} key={index} className="mb-4">
               <Card className="shadow-sm border-light rounded">
                 <Row>
                   <Col md={3}>
-                    <Card.Img variant="top" src={producto.imagen} className="img-fluid rounded-start" />
+                    <Card.Img
+                      variant="top"
+                      src={producto.imagen}
+                      className="img-fluid rounded-start"
+                    />
                   </Col>
                   <Col md={9}>
                     <Card.Body>
@@ -30,7 +42,11 @@ const Carrito = ({ carrito, setCarrito  }) => {
                         ${parseFloat(producto.precio).toLocaleString()}
                       </h5>
                       <div className="d-flex justify-content-end">
-                        <Button variant="danger" className="mt-2 w-100" onClick={() => eliminarDelCarrito(producto.id)}>
+                        <Button
+                          variant="danger"
+                          className="mt-2 w-100"
+                          onClick={() => eliminarDelCarrito(producto.id)}
+                        >
                           Eliminar del carrito
                         </Button>
                       </div>
@@ -41,7 +57,9 @@ const Carrito = ({ carrito, setCarrito  }) => {
             </Col>
           ))
         ) : (
-          <p className="text-center w-100">No tienes productos en el carrito.</p>
+          <p className="text-center w-100">
+            No tienes productos en el carrito.
+          </p>
         )}
       </Row>
       {carrito.length > 0 && (
@@ -59,4 +77,3 @@ const Carrito = ({ carrito, setCarrito  }) => {
 };
 
 export default Carrito;
-
