@@ -1,9 +1,13 @@
 import React from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
 
-const Carrito = ({ carrito }) => {
+const Carrito = ({ carrito, setCarrito  }) => {
   const total = carrito.reduce((acc, producto) => acc + parseFloat(producto.precio), 0);
 
+  const eliminarDelCarrito = (id) => {
+    const carritoActualizado = carrito.filter((producto) => producto.id !== id);
+    setCarrito(carritoActualizado); 
+  };
   return (
     <section className="container mt-5">
       <h3 className="text-center mb-4">Tu Carrito de Compras</h3>
@@ -26,7 +30,7 @@ const Carrito = ({ carrito }) => {
                         ${parseFloat(producto.precio).toLocaleString()}
                       </h5>
                       <div className="d-flex justify-content-end">
-                        <Button variant="danger" className="w-25 mt-2 w-100">
+                        <Button variant="danger" className="mt-2 w-100" onClick={() => eliminarDelCarrito(producto.id)}>
                           Eliminar del carrito
                         </Button>
                       </div>

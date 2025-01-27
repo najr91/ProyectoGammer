@@ -66,7 +66,7 @@ function App() {
                 </ProtectorRutas>
               }
             />
-            <Route path="/Carrito" element={<Carrito carrito={carrito} />} />
+            <Route path="/Carrito" element={<Carrito carrito={carrito} setCarrito={setCarrito } />} />
             <Route path="*" element={<ErroR404 />}></Route>
             <Route
               path="/login"

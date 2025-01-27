@@ -59,8 +59,6 @@ const DetalleProducto = ({ agregarAlCarrito, carrito }) => {
   const handleMouseLeave = () => {
     setHoveredEstrella(0);
   };
-
-  // Obtener la información del juego desde la API
   const obtenerJuego = async () => {
     const respuesta = await obtenerJuegos(id);
     if (respuesta.status === 200) {
