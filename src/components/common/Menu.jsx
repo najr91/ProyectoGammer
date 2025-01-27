@@ -16,7 +16,7 @@ const Menu = ({ usuarioLogeado, setusuarioLogeado }) => {
   return (
     <Navbar expand="lg" className="Menu navbar-dark">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src="c:\Users\BEEP\Downloads\WhatsApp Image 2025-01-23 at 15.59.26.jpeg" alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
