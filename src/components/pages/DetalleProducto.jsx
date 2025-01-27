@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "../../style/detalleProducto.css";
 import { obtenerJuegos } from "../helpers/queriesProductos";
 import { useParams } from "react-router-dom";
 import { Fire } from "react-bootstrap-icons";
+import "../../style/detalleProducto.css";
 
-const DetalleProducto = ({ agregarAlCarrito }) => {  
+const DetalleProducto = ({ agregarAlCarrito, carrito }) => {
   const [Estrellas, setEstrellas] = useState(0);
   const [Comentario, setComentario] = useState("");
   const [ComentariosList, setComentariosList] = useState([
@@ -60,21 +60,24 @@ const DetalleProducto = ({ agregarAlCarrito }) => {
     setHoveredEstrella(0);
   };
 
-
+  // Obtener la información del juego desde la API
   const obtenerJuego = async () => {
     const respuesta = await obtenerJuegos(id);
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
       setJuegos(datos);
     } else {
-      alert("Ocurrio un error intente mas tarde");
+      alert("Ocurrio un error, intente más tarde");
     }
   };
 
   useEffect(() => {
     obtenerJuego();
-  }, []);  
- 
+  }, []);
+
+
+  const productoEnCarrito = carrito.find((producto) => producto.id === juegos.id);
+
   const agregarAlCarritoHandler = () => {
     const producto = {
       id: juegos.id,
@@ -82,8 +85,7 @@ const DetalleProducto = ({ agregarAlCarrito }) => {
       precio: juegos.precio,
       imagen: juegos.imagen,
     };
-    console.log(producto)
-    agregarAlCarrito(producto); 
+    agregarAlCarrito(producto);
   };
 
   return (
@@ -96,7 +98,7 @@ const DetalleProducto = ({ agregarAlCarrito }) => {
                 <img
                   src={juegos.imagen}
                   alt="Juego Horizond"
-                  className="img-fluid rounded-start "
+                  className="img-fluid rounded-start"
                 />
               </div>
               <div className="col-md-7">
@@ -125,13 +127,15 @@ const DetalleProducto = ({ agregarAlCarrito }) => {
                       </>
                     )}
                   </div>
+
                   <div className="d-flex justify-content-between align-items-center">
                     <b className="text-success">Disponible</b>
                     <button
                       onClick={agregarAlCarritoHandler}
                       className="btn btn-outline-dark"
+                      disabled={productoEnCarrito}  
                     >
-                      Añadir al carrito
+                      {productoEnCarrito ? "Añadido" : "Añadir al carrito"}  
                     </button>
                   </div>
                 </div>
@@ -194,4 +198,5 @@ const DetalleProducto = ({ agregarAlCarrito }) => {
 };
 
 export default DetalleProducto;
+
 
