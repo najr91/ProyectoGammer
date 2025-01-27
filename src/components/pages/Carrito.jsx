@@ -90,7 +90,11 @@ const Carrito = ({ carrito, setCarrito }) => {
           <h4>
             <strong>Total: ${total.toLocaleString()}</strong>
           </h4>
-          <Button variant="primary" className="btn-lg" onClick={handleShowModal}>
+          <Button
+            variant="primary"
+            className="btn-lg"
+            onClick={handleShowModal}
+          >
             Proceder al Pago
           </Button>
         </div>
@@ -150,7 +154,7 @@ const Carrito = ({ carrito, setCarrito }) => {
             <Form.Group className="mb-3" controlId="formTarjeta">
               <Form.Label>Número de Tarjeta</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Ingresa el número de tu tarjeta"
                 {...register("numero", {
                   required: "El número de la tarjeta es un dato obligatorio",
@@ -169,48 +173,58 @@ const Carrito = ({ carrito, setCarrito }) => {
               </Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-5 d-flex align-items-center" controlId="CodigoSeguridad">
-  <Form.Label className="mb-0 me-3">Código de seguridad</Form.Label>
-  <Form.Control
-    type="text"
-    placeholder="Ingresa el código de seguridad"
-    {...register("cvv", {
-      required: "El código de seguridad es obligatorio",
-      minLength: {
-        value: 3,
-        message: "Debe ingresar como mínimo 3 caracteres",
-      },
-      maxLength: {
-        value: 3,
-        message: "Debe ingresar como máximo 3 caracteres",
-      },
-    })}
-  />
-  <Form.Text className="text-danger">
-    {errors.cvv?.message}
-  </Form.Text>
-</Form.Group>
+            <Form.Group
+              className="mb-5 d-flex align-items-center"
+              controlId="CodigoSeguridad"
+            >
+              <Form.Label className="mb-0 me-3">Código de seguridad</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Ingresa el código de seguridad"
+                {...register("cvv", {
+                  required: "El código de seguridad es obligatorio",
+                  minLength: {
+                    value: 3,
+                    message: "Debe ingresar como mínimo 3 caracteres",
+                  },
+                  maxLength: {
+                    value: 3,
+                    message: "Debe ingresar como máximo 3 caracteres",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.cvv?.message}
+              </Form.Text>
+            </Form.Group>
 
-<Form.Group className="mb-4 d-flex align-items-center" controlId="FechaExpiracion">
-  <Form.Label className="mb-0 me-3">Fecha de Expiración</Form.Label>
-  <Form.Control
-    type="date"
-    {...register("fechaVencimiento", {
-      required: "La fecha de vencimiento es obligatoria",
-      validate: {
-        notInPast: (value) =>
-          new Date(value) > new Date() || "La fecha de vencimiento no puede ser en el pasado",
-      },
-    })}
-  />
-  <Form.Text className="text-danger">
-    {errors.fechaVencimiento?.message}
-  </Form.Text>
-</Form.Group>
-
+            <Form.Group
+              className="mb-4 d-flex align-items-center"
+              controlId="FechaExpiracion"
+            >
+              <Form.Label className="mb-0 me-3">Fecha de Expiración</Form.Label>
+              <Form.Control
+                type="date"
+                {...register("fechaVencimiento", {
+                  required: "La fecha de vencimiento es obligatoria",
+                  validate: {
+                    notInPast: (value) =>
+                      new Date(value) > new Date() ||
+                      "La fecha de vencimiento no puede ser en el pasado",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.fechaVencimiento?.message}
+              </Form.Text>
+            </Form.Group>
 
             <div className="d-flex justify-content-end">
-              <Button variant="secondary" onClick={handleCloseModal} className="me-2">
+              <Button
+                variant="secondary"
+                onClick={handleCloseModal}
+                className="me-2"
+              >
                 Cancelar
               </Button>
               <Button variant="primary" type="submit">

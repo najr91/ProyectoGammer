@@ -71,6 +71,18 @@
       "JuegoSemanal": "No",
       "TipoConsola": "ps4",
       "id": "InPXELl"
+    },
+    {
+      "nombreJuego": "Minecraft",
+      "precio": "17000",
+      "imagen": "https://gaming-cdn.com/images/news/articles/8241/cover/1000x563/a-partir-de-ahora-minecraft-tendra-varias-actualizaciones-gratis-al-ano-cover66df1e5ce5940.jpg",
+      "categoria": "Survival",
+      "descripcion_breve": "Minecraft es un juego de supervivencia.",
+      "descripcion_amplia": "Minecraft es un videojuego de tipo sandbox creado por Markus Persson y desarrollado por Mojang Studios. El juego fue lanzado inicialmente en 2009 como una versión alfa, y desde entonces ha ganado una increíble popularidad.",
+      "desarrollador": "Microsoft",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "windows",
+      "id": "ced2Afi"
     }
   ]
 }
