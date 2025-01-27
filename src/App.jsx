@@ -33,7 +33,6 @@ function App() {
   }, []);
   
    useEffect(() => {
-    console.log("Guardando carrito en localStorage:", carrito); 
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }, [carrito]); 
   

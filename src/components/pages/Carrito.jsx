@@ -2,28 +2,38 @@ import React from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
 
 const Carrito = ({ carrito }) => {
-  
   const total = carrito.reduce((acc, producto) => acc + parseFloat(producto.precio), 0);
 
   return (
     <section className="container mt-5">
       <h3 className="text-center mb-4">Tu Carrito de Compras</h3>
-      <Row>
+
+      
+      <Row className="g-3"> 
         {carrito.length > 0 ? (
           carrito.map((producto, index) => (
-            <Col md={4} key={index} className="mb-4">
-              <Card className="h-100 shadow-sm">
-                <Card.Img variant="top" src={producto.imagen} />
-                <Card.Body>
-                  <Card.Title>{producto.nombreJuego}</Card.Title>
-                  <Card.Text>{producto.descripcion}</Card.Text>
-                  <h5 className="text-success">
-                    ${parseFloat(producto.precio).toLocaleString()} 
-                  </h5>
-                  <Button variant="danger" className="w-100">
-                    Eliminar del carrito
-                  </Button>
-                </Card.Body>
+            <Col md={12} key={index} className="mb-4">
+              <Card className="shadow-sm border-light rounded">
+                <Row>
+                  <Col md={3}>
+                    <Card.Img variant="top" src={producto.imagen} className="img-fluid rounded-start" />
+                  </Col>
+                  <Col md={9}>
+                    <Card.Body>
+                      <Card.Title>{producto.nombreJuego}</Card.Title>
+                      <Card.Text>{producto.descripcion}</Card.Text>
+                      <h5 className="text-success">
+                        ${parseFloat(producto.precio).toLocaleString()}
+                      </h5>
+                      {/* Alineación del botón a la derecha */}
+                      <div className="d-flex justify-content-end">
+                        <Button variant="danger" className="w-25 mt-2">
+                          Eliminar del carrito
+                        </Button>
+                      </div>
+                    </Card.Body>
+                  </Col>
+                </Row>
               </Card>
             </Col>
           ))
@@ -32,10 +42,11 @@ const Carrito = ({ carrito }) => {
         )}
       </Row>
 
+      {/* Si hay productos en el carrito, mostrar el total */}
       {carrito.length > 0 && (
         <div className="d-flex justify-content-between align-items-center mt-4">
           <h4>
-            Total: ${total.toLocaleString()} 
+            <strong>Total: ${total.toLocaleString()}</strong>
           </h4>
           <Button variant="primary" className="btn-lg">
             Proceder al Pago
@@ -47,5 +58,4 @@ const Carrito = ({ carrito }) => {
 };
 
 export default Carrito;
-
 
