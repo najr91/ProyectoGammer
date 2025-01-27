@@ -19,6 +19,12 @@ function App() {
   const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
   const [usuarioLogeado, setusuarioLogeado] = useState(usuario);
 
+  const [carrito, setCarrito] = useState([]);
+
+  const agregarAlCarrito = (producto) => {
+    setCarrito([...carrito, producto]);
+  };
+
   return (
     <>
       <div className="App">
@@ -32,7 +38,7 @@ function App() {
             <Route path="/" element={<Inicio></Inicio>}></Route>
             <Route
               path="/DetalleProducto/:id"
-              element={<DetalleProducto></DetalleProducto>}
+              element={<DetalleProducto agregarAlCarrito={agregarAlCarrito}></DetalleProducto>}
             ></Route>
             <Route
               path="/administrador/*"
@@ -42,7 +48,7 @@ function App() {
                 </ProtectorRutas>
               }
             />
-            <Route path={"/Carrito"} element={<Carrito></Carrito>}></Route>
+            <Route path="/Carrito" element={<Carrito></Carrito>}></Route>
             <Route path="*" element={<ErroR404 />}></Route>
             <Route
               path="/login"

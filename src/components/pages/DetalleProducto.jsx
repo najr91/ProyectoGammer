@@ -63,8 +63,7 @@ const DetalleProducto = () => {
   const { id } = useParams();
 
   const obtenerJuego = async () => {
-    
-  const respuesta = await obtenerJuegos(id);
+    const respuesta = await obtenerJuegos(id);
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
       setJuegos(datos);
@@ -72,12 +71,22 @@ const DetalleProducto = () => {
       alert("Ocurrio un error intente mas tarde");
     }
   };
+  
 
   useEffect(() => {
     obtenerJuego();
   }, []);
 
-  
+  const agregarAlCarritoHandler = () => {
+    const producto = {
+      id: juegos.id,
+      nombreJuego: juegos.nombreJuego,
+      precio: juegos.precio, 
+      imagen: juegos.imagen,
+    };
+
+    agregarAlCarrito(producto); 
+  };
 
   return (
     <section className="container mt-5">
@@ -162,9 +171,6 @@ const DetalleProducto = () => {
                     onChange={handleComentarioChange}
                   />
                 </div>
-                <button type="submit" className="btn btn-primary">
-                  Enviar Comentario
-                </button>
               </form>
 
               <div className="Comentarios-list mt-4">
