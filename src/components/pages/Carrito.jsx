@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Button, Card, Row, Col, Modal, Form } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
 const Carrito = ({ carrito, setCarrito }) => {
   const [showModal, setShowModal] = useState(false);
-  const [nombre, setNombre] = useState("");
-  const [direccion, setDireccion] = useState("");
-  const [tarjeta, setTarjeta] = useState("");
+  const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      reset,
+      setValue,
+    } = useForm();
 
   const total = carrito.reduce(
     (acc, producto) => acc + parseFloat(producto.precio),
@@ -21,12 +26,12 @@ const Carrito = ({ carrito, setCarrito }) => {
       draggable: false,
     });
     setCarrito(carritoActualizado);
-  };
+  }; 
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     Swal.fire({
       title: "Compra realizada con éxito!",
@@ -100,14 +105,27 @@ const Carrito = ({ carrito, setCarrito }) => {
           <Modal.Title>Formulario de Compra</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formNombre">
               <Form.Label>Nombre Completo</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Ingresa tu nombre"
-                required
+                {...register("nombre", {
+                    required: "El nombre es un dato obligatorio",
+                    minLength: {
+                      value: 2,
+                      message: "Debe ingresar como minimo 2 caracteres",
+                    },
+                    maxLength: {
+                      value: 50,
+                      message: "Debe ingresar como maximo 50 caracteres inclusive",
+                    },
+                  })}
               />
+              <Form.Text className="text-danger">
+                          {errors.nombre?.message}
+                        </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formDireccion">
@@ -115,8 +133,21 @@ const Carrito = ({ carrito, setCarrito }) => {
               <Form.Control
                 type="text"
                 placeholder="Ingresa tu dirección"
-                required
+                {...register("Direccion", {
+                    required: "El nombre de la direccion es un dato obligatorio",
+                    minLength: {
+                      value: 5,
+                      message: "Debe ingresar como minimo 5 caracteres",
+                    },
+                    maxLength: {
+                      value: 40,
+                      message: "Debe ingresar como maximo 400 caracteres inclusive",
+                    },
+                  })}
               />
+              <Form.Text className="text-danger">
+                          {errors.direccion?.message}
+                        </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formTarjeta">
@@ -124,8 +155,22 @@ const Carrito = ({ carrito, setCarrito }) => {
               <Form.Control
                 type="text"
                 placeholder="Ingresa el número de tu tarjeta"
-                required
+                {...register("Numero", {
+                    required: "El numero de la tarjeta es un dato obligatorio",
+                    minLength: {
+                      value: 13,
+                      message: "Debe ingresar como minimo 13 caracteres",
+                    },
+                    maxLength: {
+                      value: 19,
+                      message: "Debe ingresar como maximo 19 caracteres inclusive",
+                    },
+                  })}
+                  
               />
+              <Form.Text className="text-danger">
+                          {errors.Numero?.message}
+                        </Form.Text>
             </Form.Group>
 
             <div className="d-flex mx-auto">
@@ -134,17 +179,37 @@ const Carrito = ({ carrito, setCarrito }) => {
               <Form.Control
                 type="text"
                 placeholder="Ingresa el número de tu tarjeta"
-                required
+                {...register("TarjetaNum", {
+                    required: "El numero de la tarjeta es un dato obligatorio",
+                    minLength: {
+                      value: 3,
+                      message: "Debe ingresar como minimo 3 caracteres",
+                    },
+                    maxLength: {
+                      value: 3,
+                      message: "Debe ingresar como maximo 3 caracteres inclusive",
+                    },
+                  })}
               />
+              <Form.Text className="text-danger">
+                          {errors.TarjetaNum?.message}
+                        </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="FechaExpiracion">
-              <Form.Label>Fecha de Expiracion</Form.Label>
+              <Form.Label className="mb-4">Fecha  de  Expiracion</Form.Label>
               <Form.Control
                 type="date"
-                placeholder="Ingresa el número de tu tarjeta"
-                required
+                {...register("fechaVencimiento", {
+                    required: "La fecha de vencimiento es obligatoria",
+                    validate: {
+                      notInPast: (value) => new Date(value) > new Date() || "La fecha de vencimiento no puede ser en el pasado",
+                    },
+                  })}
               />
+              <Form.Text className="text-danger">
+                          {errors.fechaVencimiento?.message}
+                        </Form.Text>
             </Form.Group>
             </div>
 
