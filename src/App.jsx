@@ -12,7 +12,8 @@ import FormularioProducto from "./components/Productos/FormularioProducto";
 import Login from "./components/pages/Login";
 import { useState } from "react";
 import ProtectorRutas from "./components/Routes/ProtectorRutas";
-import RutasAdministrador from "./components/Routes/RutasAdministrador"
+import RutasAdministrador from "./components/Routes/RutasAdministrador";
+import Carrito from "./components/pages/Carrito";
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
@@ -34,14 +35,14 @@ function App() {
               element={<DetalleProducto></DetalleProducto>}
             ></Route>
             <Route
-  path="/administrador/*" // Esto asegura que las rutas dentro de "/administrador" se manejen correctamente
-  element={
-    <ProtectorRutas>
-      <RutasAdministrador />
-    </ProtectorRutas>
-  }
-/>
-
+              path="/administrador/*"
+              element={
+                <ProtectorRutas>
+                  <RutasAdministrador />
+                </ProtectorRutas>
+              }
+            />
+            <Route path={"/Carrito"} element={<Carrito></Carrito>}></Route>
             <Route path="*" element={<ErroR404 />}></Route>
             <Route
               path="/login"
