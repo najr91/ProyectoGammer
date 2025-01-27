@@ -34,7 +34,7 @@ const Inicio = () => {
           </div>
         </article>
         <article>
-            <SliderPortada></SliderPortada>
+            <SliderPortada productos={productos}></SliderPortada>
         </article>
         <article>
           <Productos productos={productos}></Productos>

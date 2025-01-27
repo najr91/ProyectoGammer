@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-.ContanerSlider {
+.ContainerSlider {
     height: auto;
     /* Ajustado para mayor espacio */
     width: 1200px;
@@ -34,7 +34,7 @@
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     /* Mantiene la proporción */
 }
@@ -68,7 +68,31 @@
 
 
 @media screen and (max-width: 599px){
-    .SliderPortada{
-        display: none;
+    .ContainerSlider {
+        height: 300px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+       align-items: center;
+       overflow:visible;
+    }
+    
+    .SliderPortada {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+    
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 100px;
+        height: 100%;
+        /* Se adapta al contenedor */
     }
 }
