@@ -130,9 +130,12 @@ const DetalleProducto = () => {
                   <div className="d-flex justify-content-between align-items-center">
                     <b className="text-success">Disponible</b>
                     {/* error 404 */}
-                    <Link to={"*"} className="btn btn-outline-dark">
-                      Añadir al carrito
-                    </Link>
+                    <button
+                  onClick={agregarAlCarritoHandler}
+                  className="btn btn-outline-dark"
+                >
+                  Añadir al carrito
+                </button>
                   </div>
                 </div>
               </div>
