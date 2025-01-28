@@ -4,11 +4,7 @@ import { Clock, Facebook, Instagram, Whatsapp } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="app-container">
-      <main className="content">
-        {/* El contenido de tu página va aquí */}
-      </main>
-      
+    <div className="pt-5">
       <footer className="footer">
         <div className="row mx-3">
           <div className="col-12 col-md-3 col-lg-3 fs-4 p-2">
