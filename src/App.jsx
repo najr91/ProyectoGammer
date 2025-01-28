@@ -17,6 +17,7 @@ import SobreNosotros from "./components/pages/SobreNosotros";
 import Carrito from "./components/pages/Carrito";
 
 
+
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
   const [usuarioLogeado, setusuarioLogeado] = useState(usuario);
@@ -60,6 +61,7 @@ function App() {
               }
             ></Route>
             <Route
+
               path="/administrador/*"
               element={
                 <ProtectorRutas>
