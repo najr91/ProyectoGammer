@@ -11,6 +11,9 @@ import ErroR404 from "./components/pages/ErroR404";
 import FormularioProducto from "./components/Productos/FormularioProducto";
 import Login from "./components/pages/Login";
 import { useState } from "react";
+import ProtectorRutas from "./components/Routes/ProtectorRutas";
+import RutasAdministrador from "./components/Routes/RutasAdministrador"
+import SobreNosotros from "./components/pages/SobreNosotros";
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
@@ -20,8 +23,10 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-          DetalleProducto
-          <Menu setusuarioLogeado={setusuarioLogeado} usuarioLogeado={usuarioLogeado}></Menu>
+          <Menu
+            setusuarioLogeado={setusuarioLogeado}
+            usuarioLogeado={usuarioLogeado}
+          ></Menu>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
             <Route
@@ -29,18 +34,16 @@ function App() {
               element={<DetalleProducto></DetalleProducto>}
             ></Route>
             <Route
-              path="/administrador"
-              element={<Administrador></Administrador>}
-            ></Route>
-            <Route
-              path="/administrador/crear"
-              element={<FormularioProducto crearProducto={true} />}
-            ></Route>
-            <Route
-              path="/administrador/editar/:id"
-              element={<FormularioProducto crearProducto={false} />}
-            ></Route>
+  path="/administrador/*" // Esto asegura que las rutas dentro de "/administrador" se manejen correctamente
+  element={
+    <ProtectorRutas>
+      <RutasAdministrador />
+    </ProtectorRutas>
+  }
+/>
+
             <Route path="*" element={<ErroR404 />}></Route>
+            <Route path="/Nosotros" element={<SobreNosotros />}></Route>
             <Route
               path="/login"
               element={<Login setusuarioLogeado={setusuarioLogeado}></Login>}

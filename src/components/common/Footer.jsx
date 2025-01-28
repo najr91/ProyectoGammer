@@ -1,11 +1,12 @@
 import React from "react";
 import "../../style/Style.css";
 import { Clock, Facebook, Instagram, Whatsapp } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <section>
-      <div className="app-container">
+      <div className="">
         <main className="content"></main>
         <footer className="footer ">
           <div className="row mx-3">
@@ -46,7 +47,7 @@ const Footer = () => {
                 </li>
                 <li className="fs-5 row">
                   <p>
-                    Por cualquier problema o duda dirigase <a href="">aquí</a>.
+                    Por cualquier problema o duda dirigase <Link to={"*"}>aquí</Link>.
                   </p>
                 </li>
               </ul>
