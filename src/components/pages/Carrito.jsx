@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { Button, Card, Row, Col, Modal, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import "../../style/Carrito.css";
+import Table from "react-bootstrap/Table";
 
 const Carrito = ({ carrito, setCarrito }) => {
   const [showModal, setShowModal] = useState(false);
+  const comprobanteLocalStorage = localStorage.getItem('comprobante') || []
+  const [comprobante, setComprobante] = useState(comprobanteLocalStorage);
   const {
     register,
     handleSubmit,
@@ -36,14 +40,16 @@ const Carrito = ({ carrito, setCarrito }) => {
       icon: "success",
       draggable: false,
     });
+
+    setComprobante([...comprobante, data]);
+    localStorage.setItem('comprobante',JSON.stringify(comprobante))
+    console.log(comprobante);
     handleCloseModal();
   };
 
   return (
-
     <section className="container mt-5 py-5">
       <h3 className="text-center mb-4">Tu Carrito de Compras</h3>
-
 
       <Row className="g-3">
         {carrito.length > 0 ? (
@@ -101,7 +107,28 @@ const Carrito = ({ carrito, setCarrito }) => {
           </Button>
         </div>
       )}
-
+      <div className="container-Comprobante">
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Direccion</th>
+              <th>Fecha de vencimiento</th>
+            </tr>
+          </thead>
+          <tbody>
+            {comprobante.map((item) => (
+              <tr>
+                <td>1</td>
+                <td>{item.nombre}</td>
+                <td>{item.direccion}</td>
+                <td>{item.fechaVencimiento}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
       {/* Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
