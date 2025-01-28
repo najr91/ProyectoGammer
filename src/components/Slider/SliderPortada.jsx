@@ -1,0 +1,61 @@
+import '../../style/SliderPortada.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+const SliderPortada = ({productos}) => {
+    return (
+        <div className='SliderPortada'>
+            <div className='ContainerSlider my-5 container'>
+            <Swiper
+                    effect={'coverflow'}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={3}
+                    loop={true}
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                    }}
+                    autoplay={{
+                        delay: 2000, // Tiempo en milisegundos entre cada movimiento
+                        disableOnInteraction: false, // Continuar el autoplay incluso después de la interacción del usuario
+                      }}
+                    pagination={{ clickable: true }}
+                    modules={[EffectCoverflow,Pagination,Autoplay]}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1, // Mostrar una imagen
+                        },
+                        768: {
+                            slidesPerView: 2, // Mostrar dos imágenes
+                        },
+                        1024: {
+                            slidesPerView: 3, // Mostrar tres imágenes
+                        },
+                    }}
+                    className="mySwiper"
+                >
+                    {
+                        productos.slice(0,4).map((item)=>(
+                            <SwiperSlide>
+                            <img src={item.imagen} />
+                            <div>{item.nombreJuego}</div>
+                        </SwiperSlide>
+                        ))
+                    }
+                    
+                  
+                </Swiper>
+            </div>
+        </div>
+    );
+};
+
+export default SliderPortada;

@@ -1,0 +1,94 @@
+.container-login{
+    height: 100vh;
+    background-color: transparent;
+    background-image: url("https://drop-assets.ea.com/images/59DPZqzj9mqhQL2V58sTMC/04e69331617de690d6e29707c49c191e/clubs.png?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5&q=85&w=1280");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+}
+
+
+.loginContainer{
+    height: 400px;
+    width: 60%;
+    background-color: rgba(3, 3, 3, 0.541);
+    margin-top: 100px;
+    padding-top:5px;
+}
+
+.img-login{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-login img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn-login{
+    padding: 10px 100px;
+    border: none;
+    background-color: #19191991;
+    border: 1px solid greenyellow;
+    color: yellowgreen;
+}
+
+
+
+.input-login{
+    background-color: transparent;
+    border: 1px solid grey;
+    color: white;
+}
+
+.input-login:focus{
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid white;
+    color: white;
+}
+
+.input-login::placeholder{
+    color: white;
+}
+
+.input-login:blur{
+    color: white;
+}
+
+@media screen and (max-width: 599px){
+    .container-login{
+        height: auto;
+        background-color: transparent;
+        background-image: url("https://drop-assets.ea.com/images/59DPZqzj9mqhQL2V58sTMC/04e69331617de690d6e29707c49c191e/clubs.png?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5&q=85&w=1280");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: cover;
+        padding: 0px 20px;
+    }
+    .loginContainer{
+        height: 500px;
+        width: 100%;
+        background-color: rgba(3, 3, 3, 0.541);
+        margin-top: 100px;
+        padding-top:5px;
+    }
+    
+}
+
+
+@media screen and (max-width: 991px){
+    .container-login{
+        height: auto;
+        background-color: transparent;
+        background-image: url("https://drop-assets.ea.com/images/59DPZqzj9mqhQL2V58sTMC/04e69331617de690d6e29707c49c191e/clubs.png?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5&q=85&w=1280");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: cover;
+        padding: 0px 20px;
+    }
+}

@@ -1,10 +1,6 @@
 .App {
-  background-color: #191919;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.mainSeccion{
-  flex-grow: 1;
+  color: aliceblue;
 }

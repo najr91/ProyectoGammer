@@ -1,0 +1,110 @@
+/* .card-estilizada{
+    border: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.Calificacion-tiulo{
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .Calificacion {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  
+  .Estrella {
+    font-size: 1.5rem;
+    color: #dcdcdc;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .Estrella.filled {
+    color: #f39c12;
+  }
+  
+  .Estrella:hover {
+    color: #f39c12;
+  }
+  
+  
+  
+  .rezine{
+    resize: none;
+  }
+  
+   */
+
+   .container-detalle{
+    width: 100%;
+  }
+  
+  .img-detalle{
+      height: 400px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+  }
+  
+  .img-detalle img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }
+  
+  .card-body{
+    background-color: transparent;
+    width: 100%;
+  }
+  
+  .card-estilizada{
+      border: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+  .Calificacion-tiulo{
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    
+    .Calificacion {
+      display: flex;
+      justify-content: flex-start;
+      gap: 5px;
+    }
+    
+    .Estrella {
+      font-size: 1.5rem;
+      color: #dcdcdc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .Estrella.filled {
+      color: #f39c12;
+    }
+    
+    .Estrella:hover {
+      color: #f39c12;
+    }
+    
+    .rezine{
+      resize: none;
+    }
+  
+    .btn-agregarCarrito{
+      padding: 10px 20px;
+      background-color: greenyellow;
+      border-radius: 10px;
+      border: 1px solid transparent;
+    }

@@ -1,0 +1,63 @@
+.Container-TituloProducto{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+}
+
+.Container-TituloProducto h3{
+    position: relative;
+
+}
+
+.Container-TituloProducto h3::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: greenyellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inputFiltro{
+    background-color: transparent;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: 1px solid grey;
+    padding: 0px 10px;
+    border-radius: 10px;
+
+}
+
+.Container-TituloProducto button{
+    padding: 10px 40px;
+    border: 1px solid transparent;
+    background-color: greenyellow;
+    color: black;
+}
+
+.Container-TituloProducto button:hover{
+    border: 1px solid greenyellow;
+    background-color: #191919;
+    color: greenyellow;
+    transition: 1s ease;
+}
+
+@media screen and (max-width:599px){
+    .Container-TituloProducto{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .Container-TituloProducto button{
+        padding: 8px 15px;
+        
+    }
+}

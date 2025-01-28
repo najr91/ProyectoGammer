@@ -1,0 +1,84 @@
+.PortadaInicio{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    background-image: url('https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blt2e6f8da2c1562efc/672bd5a0ef121637f1bf6942/Template-Bnet-Launcher-CUI-Phoenix.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.PortadaInicio::after{
+     content: '';
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.573);
+     position: absolute;
+     top: 0;
+     left: 0;
+}
+
+.ContainerInicio{
+    height: 300px;
+    width: 100%;
+    z-index: 1;
+    color: white;
+
+}
+
+.ContainerInicio div {
+    width: 50%;
+}
+
+.button-portada{
+    padding: 10px 50px;
+    background-color: greenyellow;
+    border: 1px solid transparent;
+    margin-top: 20px;
+    transition: 1s ease;
+}
+
+.button-portada:hover{
+    background-color: #191919;
+    border: 1px solid greenyellow;
+    color: greenyellow;
+
+}
+
+@media screen and (max-width:599px) {
+    .ContainerInicio{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .ContainerInicio div{
+        width: 100%;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:991px) {
+    .ContainerInicio{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .ContainerInicio div{
+        width: 100%;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
