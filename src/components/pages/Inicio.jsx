@@ -29,7 +29,7 @@ const Inicio = () => {
                 vitae corrupti voluptatum perferendis accusamus quod officiis
                 illum laboriosam quo incidunt?
               </p>
-              <button className="button-portada">Learn More</button>
+              <Link className="button-portada text-decoration-none text-black" to={"*"}>Learn More</Link>
               </div>
             </div>
           </div>
