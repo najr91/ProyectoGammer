@@ -15,7 +15,6 @@
   
   .textoColumna {
     z-index: 2;
-    opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
   }
   
@@ -46,10 +45,7 @@
     cursor: pointer;
   }
   
-  .ConteinerBanner:hover .textoColumna {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  
   
   @keyframes fadeIn {
     0% {
