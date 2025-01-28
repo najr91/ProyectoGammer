@@ -3,6 +3,7 @@ import '../../style/CardProducto.css';
 
 const CardProducto = ({ productosItem }) => {
     return (
+
         <a href={"/DetalleProducto/"+ productosItem.id} className="BotonDetalle">
             <div className="CardProducto">
                 <div className="CardImg">

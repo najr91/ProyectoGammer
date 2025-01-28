@@ -1,5 +1,5 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css"; 
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Inicio from "./components/pages/Inicio";
@@ -10,19 +10,41 @@ import Administrador from "./components/pages/Administrador";
 import ErroR404 from "./components/pages/ErroR404";
 import FormularioProducto from "./components/Productos/FormularioProducto";
 import Login from "./components/pages/Login";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProtectorRutas from "./components/Routes/ProtectorRutas";
 import RutasAdministrador from "./components/Routes/RutasAdministrador"
+import SobreNosotros from "./components/pages/SobreNosotros";
+import Carrito from "./components/pages/Carrito";
+
+
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
   const [usuarioLogeado, setusuarioLogeado] = useState(usuario);
 
+  const [carrito, setCarrito] = useState([]);
+
+  const agregarAlCarrito = (producto) => {
+    setCarrito((prevCarrito) => [...prevCarrito, producto]);
+  };  
+
+  useEffect(() => {
+    const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
+    if (carritoGuardado.length > 0) {
+      setCarrito(carritoGuardado);
+    }
+  }, []);
+  
+   useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]); 
+  
+  
+
   return (
     <>
       <div className="App">
         <BrowserRouter>
-          DetalleProducto
           <Menu
             setusuarioLogeado={setusuarioLogeado}
             usuarioLogeado={usuarioLogeado}
@@ -31,18 +53,25 @@ function App() {
             <Route path="/" element={<Inicio></Inicio>}></Route>
             <Route
               path="/DetalleProducto/:id"
-              element={<DetalleProducto></DetalleProducto>}
+              element={
+                <DetalleProducto
+                  agregarAlCarrito={agregarAlCarrito}
+                  carrito={carrito}
+                ></DetalleProducto>
+              }
             ></Route>
             <Route
-  path="/administrador/*" // Esto asegura que las rutas dentro de "/administrador" se manejen correctamente
-  element={
-    <ProtectorRutas>
-      <RutasAdministrador />
-    </ProtectorRutas>
-  }
-/>
 
+              path="/administrador/*"
+              element={
+                <ProtectorRutas>
+                  <RutasAdministrador />
+                </ProtectorRutas>
+              }
+            />
+            <Route path="/Carrito" element={<Carrito carrito={carrito} setCarrito={setCarrito } />} />
             <Route path="*" element={<ErroR404 />}></Route>
+            <Route path="/Nosotros" element={<SobreNosotros />}></Route>
             <Route
               path="/login"
               element={<Login setusuarioLogeado={setusuarioLogeado}></Login>}
