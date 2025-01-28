@@ -25,18 +25,6 @@
       "id": "3EtvOYZ"
     },
     {
-      "nombreJuego": "mineral",
-      "precio": "6433",
-      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "Indie",
-      "descripcion_breve": "3rfevfds cfs",
-      "descripcion_amplia": "3fwrasdvzerg",
-      "desarrollador": "hoisfc ",
-      "JuegoSemanal": "Si",
-      "TipoConsola": "xbox-classic",
-      "id": "c34e"
-    },
-    {
       "nombreJuego": "ark ",
       "precio": "23000",
       "imagen": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1113410/capsule_616x353.jpg?t=1622858339",
@@ -71,6 +59,30 @@
       "JuegoSemanal": "No",
       "TipoConsola": "ps4",
       "id": "NU3U6NH"
+    },
+    {
+      "nombreJuego": "Final Fantasy VII",
+      "precio": "30000",
+      "imagen": "https://i0.wp.com/xn--oo-yjab.cl/wp-content/uploads/2013/06/final_fantasy_VII_1024-e1372456296512.jpg?resize=980%2C666",
+      "categoria": "Aventura",
+      "descripcion_breve": "Final Fantasy es una de las franquicias.",
+      "descripcion_amplia": "Final Fantasy es una franquicia de videojuegos desarrollada y publicada por Square Enix (anteriormente Square Soft), que comenzó en 1987. La serie ha ganado fama mundial y se ha convertido en una de las más influyentes dentro del género.\n",
+      "desarrollador": "Square Enix",
+      "JuegoSemanal": "No",
+      "TipoConsola": "ps4",
+      "id": "InPXELl"
+    },
+    {
+      "nombreJuego": "Minecraft",
+      "precio": "17000",
+      "imagen": "https://gaming-cdn.com/images/news/articles/8241/cover/1000x563/a-partir-de-ahora-minecraft-tendra-varias-actualizaciones-gratis-al-ano-cover66df1e5ce5940.jpg",
+      "categoria": "Survival",
+      "descripcion_breve": "Minecraft es un juego de supervivencia.",
+      "descripcion_amplia": "Minecraft es un videojuego de tipo sandbox creado por Markus Persson y desarrollado por Mojang Studios. El juego fue lanzado inicialmente en 2009 como una versión alfa, y desde entonces ha ganado una increíble popularidad.",
+      "desarrollador": "Microsoft",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "windows",
+      "id": "ced2Afi"
     }
   ]
 }
