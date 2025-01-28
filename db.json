@@ -1,25 +1,13 @@
 {
   "Productos": [
     {
-      "nombreJuego": "Final Fantasy",
-      "precio": 25000,
-      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "Aventura",
-      "descripcion_breve": "wadawdawdawdaw",
-      "descripcion_amplia": "dwadadawdawdawdawdawdawdawdaw",
-      "desarrollador": "Ejemplo Studios",
-      "JuegoSemanal": "No",
-      "TipoConsola": "switch",
-      "id": "8300"
-    },
-    {
       "nombreJuego": "League of leguend",
       "precio": "15999",
       "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
-      "categoria": "Accion",
-      "descripcion_breve": "dadawdawdawdawdaw",
-      "descripcion_amplia": "dawdawdawdawdawdawdawdawdawd",
-      "desarrollador": "wadawdawd",
+      "categoria": "MOBA",
+      "descripcion_breve": "League of Legends: juego de estrategia  en línea.",
+      "descripcion_amplia": "eague of Legends (LoL) es un juego de estrategia en línea multijugador donde dos equipos de cinco jugadores compiten para destruir la base enemiga. Con un enfoque en habilidades, trabajo en equipo y estrategia.",
+      "desarrollador": "Riot Games",
       "JuegoSemanal": "Si",
       "TipoConsola": "windows",
       "id": "3EtvOYZ"
@@ -28,10 +16,10 @@
       "nombreJuego": "ark ",
       "precio": "23000",
       "imagen": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1113410/capsule_616x353.jpg?t=1622858339",
-      "categoria": "Aventura",
-      "descripcion_breve": "assfswadadawdasdaweaw",
-      "descripcion_amplia": "dawdawdawdawdawdawasdawdawda",
-      "desarrollador": "wdawadawd",
+      "categoria": "Survival",
+      "descripcion_breve": "ARK es juego de supervivencia y acción.",
+      "descripcion_amplia": "Survival Evolved es un juego de supervivencia en un mundo abierto lleno de dinosaurios y criaturas prehistóricas. Los jugadores deben recolectar recursos, construir refugios y dominar a las criaturas para sobrevivir.",
+      "desarrollador": "Studio Wildcard",
       "JuegoSemanal": "No",
       "TipoConsola": "xbox-series-x",
       "id": "HVrL6n1"
@@ -41,9 +29,9 @@
       "precio": "9000",
       "imagen": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/541570/header.jpg?t=1667000571",
       "categoria": "Terror",
-      "descripcion_breve": "dwdawdawdawd",
-      "descripcion_amplia": "awdawdawdawdawd",
-      "desarrollador": "dasdewdadawd",
+      "descripcion_breve": "Un juego aventura oscura y misteriosa con puzzles.",
+      "descripcion_amplia": "Sally Face es un juego de aventura y misterio donde los jugadores siguen a un joven llamado Sally, quien tiene una cara protésica. A través de puzzles, diálogos y una historia profunda.",
+      "desarrollador": "Steve Gabry",
       "JuegoSemanal": "Si",
       "TipoConsola": "windows",
       "id": "qSmLsPT"
@@ -53,9 +41,9 @@
       "precio": "23000",
       "imagen": "https://i.blogs.es/2f03c7/mk/1366_2000.jpg",
       "categoria": "Lucha",
-      "descripcion_breve": "awdawdasdawdawsw",
-      "descripcion_amplia": "dawdasdawdsdawd",
-      "desarrollador": "asdsadwdsda",
+      "descripcion_breve": "Mortal Kombat: juego de lucha y combates violentos",
+      "descripcion_amplia": "Mortal Kombat es una serie de videojuegos de lucha famosa por sus combates brutales y fatalities. Los jugadores controlan personajes con habilidades únicas y luchan en diferentes modalidades.",
+      "desarrollador": "NetherRealm Studios",
       "JuegoSemanal": "No",
       "TipoConsola": "ps4",
       "id": "NU3U6NH"
@@ -65,7 +53,7 @@
       "precio": "30000",
       "imagen": "https://i0.wp.com/xn--oo-yjab.cl/wp-content/uploads/2013/06/final_fantasy_VII_1024-e1372456296512.jpg?resize=980%2C666",
       "categoria": "Aventura",
-      "descripcion_breve": "Final Fantasy es una de las franquicias.",
+      "descripcion_breve": "Final Fantasy : RPG clásico con magia y aventuras",
       "descripcion_amplia": "Final Fantasy es una franquicia de videojuegos desarrollada y publicada por Square Enix (anteriormente Square Soft), que comenzó en 1987. La serie ha ganado fama mundial y se ha convertido en una de las más influyentes dentro del género.\n",
       "desarrollador": "Square Enix",
       "JuegoSemanal": "No",
@@ -83,6 +71,78 @@
       "JuegoSemanal": "Si",
       "TipoConsola": "windows",
       "id": "ced2Afi"
+    },
+    {
+      "nombreJuego": "Formula 1 2023",
+      "precio": "24000",
+      "imagen": "https://media.contentapi.ea.com/content/dam/ea/f1/f1-23/common/featured-image/f123-featured-image-16x9.jpg.adapt.crop16x9.1023w.jpg",
+      "categoria": "Deporte",
+      "descripcion_breve": "F1:juego de automovilismo de velocidad",
+      "descripcion_amplia": " es el campeonato mundial de automovilismo de velocidad, reconocido como el pináculo del deporte motor. Conducido por equipos de élite y pilotos excepcionales, se compite en circuitos alrededor del mundo en coches de tecnología avanzada.",
+      "desarrollador": "Codemasters",
+      "JuegoSemanal": "No",
+      "TipoConsola": "xbox-360",
+      "id": "J3X0B8d"
+    },
+    {
+      "nombreJuego": "Uncharted 4",
+      "precio": "30000",
+      "imagen": "https://i.blogs.es/956c51/uncharted4/1366_2000.jpg",
+      "categoria": "Aventura",
+      "descripcion_breve": "Uncharted: Aventura de acción y exploración épica.",
+      "descripcion_amplia": "Uncharted 4: es un juego de acción y aventura en tercera persona, desarrollado por Naughty Dog. Siguiendo a Nathan Drake, el protagonista, los jugadores exploran entornos exóticos, resuelven acertijos y participan en intensas secuencias de acción.",
+      "desarrollador": "Naughty Dog",
+      "JuegoSemanal": "No",
+      "TipoConsola": "ps4",
+      "id": "wzkfFM1"
+    },
+    {
+      "nombreJuego": "Days gone",
+      "precio": "32000",
+      "imagen": "https://www.eliteguias.com/img/caratulas/_og_/days-gone.jpg",
+      "categoria": "Accion",
+      "descripcion_breve": "Days Gone:juego de supervivencia postapocalíptico.",
+      "descripcion_amplia": "Days Gone es un juego de acción y supervivencia de mundo abierto ambientado en un mundo post-apocalíptico. Los jugadores controlan a Deacon St. John, un motociclista y cazarrecompensas.",
+      "desarrollador": "Bend Studio,",
+      "JuegoSemanal": "Si",
+      "TipoConsola": "windows",
+      "id": "mxFneB9"
+    },
+    {
+      "nombreJuego": "Grand theft auto V",
+      "precio": "22000",
+      "imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2014/11/410090-analisis-gta-v-ps4-xbox-one-pc.png?tf=3840x",
+      "categoria": "Accion",
+      "descripcion_breve": "GTA: Juego de acción y crimen en un mundo abierto",
+      "descripcion_amplia": "Grand Theft Auto (GTA) es una serie de videojuegos de acción en mundo abierto. Los jugadores asumen el rol de criminales en ciudades ficticias, participando en misiones, robos y actividades ilegales en entornos dinámicos.",
+      "desarrollador": " Rockstar Games",
+      "JuegoSemanal": "No",
+      "TipoConsola": "mac",
+      "id": "8J93qXw"
+    },
+    {
+      "nombreJuego": "Super Mario 64",
+      "precio": "12000",
+      "imagen": "https://media.vandal.net/m/30299/super-mario-64-cv-201542164822_1.jpg",
+      "categoria": "Aventura",
+      "descripcion_breve": "Mario 64: revolución 3D en plataformas clásicas",
+      "descripcion_amplia": "Super Mario 64 es un juego de plataformas 3D desarrollado por Nintendo, lanzado en 1996 para la Nintendo 64. Es considerado uno de los videojuegos más influyentes de todos los tiempos, estableciendo los estándares para los juegos de aventura en 3D.\n\n",
+      "desarrollador": "Nintendo",
+      "JuegoSemanal": "No",
+      "TipoConsola": "n64",
+      "id": "GMZ9bpo"
+    },
+    {
+      "nombreJuego": "Pokemon Stadium",
+      "precio": "8000",
+      "imagen": "https://jogoveio.com.br/wp-content/uploads/2023/04/thumb-pokemon-stadium-nso.jpg",
+      "categoria": "RGP",
+      "descripcion_breve": "Pokémon Stadium: batallas 3D de Pokémon en consola",
+      "descripcion_amplia": "Pokémon Stadium es un juego de lucha en 3D basado en la popular franquicia Pokémon, lanzado en 1999 para Nintendo 64. Permite a los jugadores batallar con sus Pokémon en entornos 3D , ofreciendo una experiencia única de combate.",
+      "desarrollador": "Nintendo",
+      "JuegoSemanal": "No",
+      "TipoConsola": "n64",
+      "id": "c6-pVqj"
     }
   ]
 }
