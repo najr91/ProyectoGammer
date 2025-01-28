@@ -29,8 +29,10 @@ const Productos = ({ productos }) => {
         />
       </div>
       <div className="mt-4 container">
-        <div className="row">
-          {ProductosFiltrados.map((item) => (
+        <div className="row"> 
+          {ProductosFiltrados.map((item) => ( 
+             //mapeamos el array de productos
+             // mostramos los juegos en forma de card
             <div className="col-12 col-md-4 col-lg-4" key={item.id}>
               <CardProducto productosItem={item} />
             </div>
