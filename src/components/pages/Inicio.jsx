@@ -24,13 +24,14 @@ const Inicio = () => {
           <div className="PortadaInicio">
             <div className="ContainerInicio container">
               <div>
-              <h1 className="display-2">The ultimate game spering platform</h1>
+              <h1 className="display-2">La plataforma de juegos definitiva</h1>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
-                vitae corrupti voluptatum perferendis accusamus quod officiis
-                illum laboriosam quo incidunt?
+              Descubre los mejores videojuegos, disfruta aventuras épicas, desafíos emocionantes y momentos inolvidables que harán vibrar tu mundo gamer.
               </p>
-              <Link className="button-portada text-decoration-none text-black" to={"*"}>Learn More</Link>
+              <div className="pt-4">
+              <a href="/" className="button-portada text-decoration-none text-black" >Learn More</a>
+              </div>
+              
               </div>
             </div>
           </div>
