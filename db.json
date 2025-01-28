@@ -1,56 +1,6 @@
 {
   "Productos": [
     {
-<<<<<<< HEAD
-      "nombreJuego": "Final Fantasy",
-      "precio": 25000,
-      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "Aventura",
-      "descripcion_breve": "wadawdawdawdaw",
-      "descripcion_amplia": "dwadadawdawdawdawdawdawdawdaw",
-      "desarrollador": "Ejemplo Studios",
-      "JuegoSemanal": "No",
-      "TipoConsola": "switch",
-      "id": "8300"
-    },
-    {
-      "id": "a4cb",
-      "nombreJuego": "hweoirgefv",
-      "precio": "6545",
-      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "Sandbox",
-      "descripcion_breve": "4twrgsdfbvc ",
-      "descripcion_amplia": "54tergfvdx c",
-      "desarrollador": "ethywhr",
-      "JuegoSemanal": "No",
-      "TipoConsola": "wii"
-    },
-    {
-      "nombreJuego": "culo",
-      "precio": "6342",
-      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "Multijugador",
-      "descripcion_breve": "holaa",
-      "descripcion_amplia": "trdf vcxgewfsdv",
-      "desarrollador": "lovooo",
-      "JuegoSemanal": "No",
-      "TipoConsola": "linux",
-      "id": "4d13"
-    },
-    {
-      "nombreJuego": "horaculo",
-      "precio": "7787",
-      "imagen": "https://images.pexels.com/photos/2575835/pexels-photo-2575835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "Sandbox",
-      "descripcion_breve": "tehbdgv cw4tshrg",
-      "descripcion_amplia": "5hyrfbx crhgbf c",
-      "desarrollador": "GRDVBSGFD",
-      "JuegoSemanal": "Si",
-      "TipoConsola": "linux"
-    },
-    {
-=======
->>>>>>> a5d334ccedf49b2c44989531ed9db3581e14f572
       "nombreJuego": "League of leguend",
       "precio": "15000",
       "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
@@ -73,8 +23,6 @@
       "JuegoSemanal": "No",
       "TipoConsola": "xbox-series-x",
       "id": "HVrL6n1"
-<<<<<<< HEAD
-=======
     },
     {
       "nombreJuego": "SallyFace",
@@ -123,9 +71,6 @@
       "JuegoSemanal": "Si",
       "TipoConsola": "windows",
       "id": "ced2Afi"
-<<<<<<< HEAD
->>>>>>> 45960d80a275ceb54429765dfe3fa487533bcb72
-=======
     },
     {
       "nombreJuego": "Formula 1 2023",
@@ -198,7 +143,6 @@
       "JuegoSemanal": "No",
       "TipoConsola": "n64",
       "id": "c6-pVqj"
->>>>>>> a5d334ccedf49b2c44989531ed9db3581e14f572
     }
   ]
 }

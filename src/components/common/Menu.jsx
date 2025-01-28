@@ -16,7 +16,7 @@ const Menu = ({ usuarioLogeado, setusuarioLogeado }) => {
   return (
     <Navbar expand="lg" className="Menu navbar-dark">
       <Container>
-        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/">GameOn</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
