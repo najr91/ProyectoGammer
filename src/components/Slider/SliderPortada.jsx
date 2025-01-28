@@ -1,15 +1,15 @@
 import '../../style/SliderPortada.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-const SliderPortada = () => {
+const SliderPortada = ({productos}) => {
     return (
         <div className='SliderPortada'>
-            <div className='ContanerSlider my-5 container'>
+            <div className='ContainerSlider my-5 container'>
             <Swiper
                     effect={'coverflow'}
                     grabCursor={true}
@@ -23,34 +23,35 @@ const SliderPortada = () => {
                         modifier: 1,
                         slideShadows: true,
                     }}
-                    pagination={true}
-                    modules={[EffectCoverflow, Pagination]}
+                    autoplay={{
+                        delay: 2000, // Tiempo en milisegundos entre cada movimiento
+                        disableOnInteraction: false, // Continuar el autoplay incluso después de la interacción del usuario
+                      }}
+                    pagination={{ clickable: true }}
+                    modules={[EffectCoverflow,Pagination,Autoplay]}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1, // Mostrar una imagen
+                        },
+                        768: {
+                            slidesPerView: 2, // Mostrar dos imágenes
+                        },
+                        1024: {
+                            slidesPerView: 3, // Mostrar tres imágenes
+                        },
+                    }}
                     className="mySwiper"
                 >
-                    <SwiperSlide>
-                        <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
-                        <div>Final Fantasy</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
-                        <div>Final Fantasy</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
-                        <div>Final Fantasy</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
-                        <div>Final Fantasy</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
-                        <div>Final Fantasy</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://assetsio.gnwcdn.com/final-fantasy-14-online-dawntrail.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" />
-                        <div>Final Fantasy</div>
-                    </SwiperSlide>
+                    {
+                        productos.slice(0,4).map((item)=>(
+                            <SwiperSlide>
+                            <img src={item.imagen} />
+                            <div>{item.nombreJuego}</div>
+                        </SwiperSlide>
+                        ))
+                    }
+                    
+                  
                 </Swiper>
             </div>
         </div>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <section>
-      <div className="app-container">
+      <div className="">
         <main className="content"></main>
         <footer className="footer ">
           <div className="row mx-3">
