@@ -40,7 +40,7 @@ const Carrito = ({ carrito, setCarrito }) => {
   };
 
   return (
-    <section className="container mt-5">
+    <section className="container mt-5 py-5">
       <h3 className="text-center mb-4">Tu Carrito de Compras</h3>
 
       <Row className="g-3">
