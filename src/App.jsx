@@ -13,6 +13,7 @@ import Login from "./components/pages/Login";
 import { useState } from "react";
 import ProtectorRutas from "./components/Routes/ProtectorRutas";
 import RutasAdministrador from "./components/Routes/RutasAdministrador"
+import SobreNosotros from "./components/pages/SobreNosotros";
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
@@ -22,7 +23,6 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-          DetalleProducto
           <Menu
             setusuarioLogeado={setusuarioLogeado}
             usuarioLogeado={usuarioLogeado}
@@ -43,6 +43,7 @@ function App() {
 />
 
             <Route path="*" element={<ErroR404 />}></Route>
+            <Route path="/Nosotros" element={<SobreNosotros />}></Route>
             <Route
               path="/login"
               element={<Login setusuarioLogeado={setusuarioLogeado}></Login>}

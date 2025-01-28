@@ -16,7 +16,7 @@ const Inicio = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mainSeccion">
       <section>
         <article>
           <div className="PortadaInicio">
@@ -36,7 +36,7 @@ const Inicio = () => {
         <article>
             <SliderPortada productos={productos}></SliderPortada>
         </article>
-        <article>
+        <article className="my-5">
           <Productos productos={productos}></Productos>
         </article>
       </section>
