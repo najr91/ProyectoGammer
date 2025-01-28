@@ -4,6 +4,7 @@ import Productos from "../Productos/Productos";
 import SliderPortada from "../Slider/SliderPortada";
 import { getProductos } from "../helpers/queriesProductos";
 import PortadaFifa from "../Productos/PortadaFifa";
+import { Link } from "react-router-dom";
 
 const Inicio = () => { 
   // creamos un estado para guardar los productos
