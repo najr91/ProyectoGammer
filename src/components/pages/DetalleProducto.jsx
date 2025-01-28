@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../../style/detalleProducto.css";
 import { obtenerJuegos } from "../helpers/queriesProductos";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Fire } from "react-bootstrap-icons";
+import Swal from "sweetalert2";
+import "../../style/detalleProducto.css";
 
-const DetalleProducto = () => {
+const DetalleProducto = ({ agregarAlCarrito, carrito }) => {
   const [Estrellas, setEstrellas] = useState(0);
   const [Comentario, setComentario] = useState("");
   const [ComentariosList, setComentariosList] = useState([
@@ -25,8 +26,8 @@ const DetalleProducto = () => {
     },
   ]);
   const [hoveredEstrella, setHoveredEstrella] = useState(0);
-
   const [juegos, setJuegos] = useState({});
+  const { id } = useParams();
 
   const handleComentarioChange = (event) => {
     setComentario(event.target.value);
@@ -59,17 +60,13 @@ const DetalleProducto = () => {
   const handleMouseLeave = () => {
     setHoveredEstrella(0);
   };
-
-  const { id } = useParams();
-
   const obtenerJuego = async () => {
-    
-  const respuesta = await obtenerJuegos(id);
+    const respuesta = await obtenerJuegos(id);
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
       setJuegos(datos);
     } else {
-      alert("Ocurrio un error intente mas tarde");
+      alert("Ocurrio un error, intente más tarde");
     }
   };
 
@@ -77,7 +74,25 @@ const DetalleProducto = () => {
     obtenerJuego();
   }, []);
 
-  
+  const navegacion = useNavigate()
+
+  const productoEnCarrito = carrito.find((producto) => producto.id === juegos.id);
+
+  const agregarAlCarritoHandler = () => {
+    const producto = {
+      id: juegos.id,
+      nombreJuego: juegos.nombreJuego,
+      precio: juegos.precio,
+      imagen: juegos.imagen,
+    };
+    Swal.fire({
+            title: "Se agrego el producto al carrito!",
+            icon: "success",
+            draggable: false,
+          });
+    navegacion("/")
+    agregarAlCarrito(producto);
+  };
 
   return (
     <section className="container mt-5">
@@ -89,7 +104,7 @@ const DetalleProducto = () => {
                 <img
                   src={juegos.imagen}
                   alt="Juego Horizond"
-                  className="img-fluid rounded-start "
+                  className="img-fluid rounded-start"
                 />
               </div>
               <div className="col-md-7">
@@ -113,17 +128,21 @@ const DetalleProducto = () => {
                       <>
                         <b>
                           Juego semanal
-                          <Fire className="ms-1 text-danger" /> 
+                          <Fire className="ms-1 text-danger" />
                         </b>
                       </>
                     )}
                   </div>
+
                   <div className="d-flex justify-content-between align-items-center">
                     <b className="text-success">Disponible</b>
-                    {/* error 404 */}
-                    <Link to={"*"} className="btn btn-outline-dark">
-                      Añadir al carrito
-                    </Link>
+                    <button
+                      onClick={agregarAlCarritoHandler}
+                      className="btn btn-outline-dark"
+                      disabled={productoEnCarrito}  
+                    >
+                      {productoEnCarrito ? "Añadido" : "Añadir al carrito"}  
+                    </button>
                   </div>
                 </div>
               </div>
@@ -185,3 +204,5 @@ const DetalleProducto = () => {
 };
 
 export default DetalleProducto;
+
+
