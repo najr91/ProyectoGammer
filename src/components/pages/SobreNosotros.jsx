@@ -1,6 +1,7 @@
 import "../../style/SobreNosotros.css";
 import Matias from '../../img/matias.jpeg'
 import dana from '../../img/dana.jpeg'
+import nelson from '../../img/nelson.jpeg'
 
 const SobreNosotros = () => {
   return (
@@ -49,8 +50,8 @@ const SobreNosotros = () => {
           <div className="col-12 col-md-6 col-lg-4">
             <div className="card-nosotros">
               <img
-                src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt=""
+                src={nelson}
+                alt="Nelson"
               />
               <div className="info-integrantes container">
                 <div>

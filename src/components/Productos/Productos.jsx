@@ -3,21 +3,27 @@ import "../../style/Productos.css";
 import CardProducto from "./CardProducto";
 
 const Productos = ({ productos }) => {
+  //creamos un estado para el filtro
     const [Filtro, setFiltro] = useState({
       Busqueda: ''
 
     })
-
+      
+    //creamos funcion para realizar el filtro , filtrar los productos
     const FiltrarProductos =(Productos)=>{
+      //filtramos el array de productos
       return Productos.filter((product)=>{
+        //pasamos a minuscula el valor del estado
         const BusquedaText = Filtro.Busqueda.toLowerCase()
         return (
+          //filtramos los productos que coincidan con la busqueda
           product.nombreJuego.toLowerCase().includes(BusquedaText)||
+          //filtramos resultados que coincidan con la categoria
           product.categoria.toLowerCase().includes(BusquedaText)
         )
       })
     }
-
+     //guardamos resultado del filtro en una variable
     const ProductosFiltrados=FiltrarProductos(productos)
 
   return (

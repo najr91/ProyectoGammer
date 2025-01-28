@@ -24,20 +24,20 @@ const SliderPortada = ({productos}) => {
                         slideShadows: true,
                     }}
                     autoplay={{
-                        delay: 2000, // Tiempo en milisegundos entre cada movimiento
-                        disableOnInteraction: false, // Continuar el autoplay incluso después de la interacción del usuario
-                      }}
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
                     pagination={{ clickable: true }}
                     modules={[EffectCoverflow,Pagination,Autoplay]}
                     breakpoints={{
                         0: {
-                            slidesPerView: 1, // Mostrar una imagen
+                            slidesPerView: 1,
                         },
                         768: {
-                            slidesPerView: 2, // Mostrar dos imágenes
+                            slidesPerView: 2, 
                         },
                         1024: {
-                            slidesPerView: 3, // Mostrar tres imágenes
+                            slidesPerView: 3,
                         },
                     }}
                     className="mySwiper"
