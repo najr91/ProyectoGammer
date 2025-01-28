@@ -77,7 +77,7 @@ const FormularioProducto = ({ crearProducto }) => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <Form.Group className="mb-3" controlId="formNombreJuego">
-          <Form.Label>Juego*</Form.Label>
+          <Form.Label className="text-dark"> Nombre Juego</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej:Minecraft"
@@ -98,7 +98,7 @@ const FormularioProducto = ({ crearProducto }) => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label>Precio*</Form.Label>
+          <Form.Label className="text-dark">Precio*</Form.Label>
           <Form.Control
             type="number"
             placeholder="Ej: 5000"
@@ -119,7 +119,7 @@ const FormularioProducto = ({ crearProducto }) => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formImagen">
-          <Form.Label>Imagen URL*</Form.Label>
+          <Form.Label className='text-dark'>Imagen URL*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/"
@@ -137,7 +137,7 @@ const FormularioProducto = ({ crearProducto }) => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formCategoria">
-          <Form.Label>Categoría del Juego*</Form.Label>
+          <Form.Label className='text-dark'>Categoría del Juego*</Form.Label>
           <Form.Select
             {...register("categoria", {
               required: "Debe seleccionar una categoria",
@@ -167,7 +167,7 @@ const FormularioProducto = ({ crearProducto }) => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formDescripcion">
-          <Form.Label>Descripción breve*</Form.Label>
+          <Form.Label className='text-dark'>Descripción breve*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Descripcion breve."
@@ -191,7 +191,7 @@ const FormularioProducto = ({ crearProducto }) => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formDescripcionAmplia">
-          <Form.Label>Descripción Amplia*</Form.Label>
+          <Form.Label className='text-dark'>Descripción Amplia*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Descripción detallada del producto, características y ventajas "
@@ -216,7 +216,7 @@ const FormularioProducto = ({ crearProducto }) => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formDesarrollador">
-          <Form.Label>Desarrollador*</Form.Label>
+          <Form.Label className='text-dark'>Desarrollador*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ingrese el nombre del desarrollador.."
@@ -238,7 +238,7 @@ const FormularioProducto = ({ crearProducto }) => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formJuegoSemanal">
-          <Form.Label>Juego semanal?*</Form.Label>
+          <Form.Label className='text-dark'>Juego semanal?*</Form.Label>
           <Form.Select
             {...register("JuegoSemanal", {
               required: "Debe seleccionar una opción",
@@ -253,7 +253,7 @@ const FormularioProducto = ({ crearProducto }) => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formTipoConsola">
-          <Form.Label>Tipo de Consola*</Form.Label>
+          <Form.Label className='text-dark'>Tipo de Consola*</Form.Label>
           <Form.Select
             {...register("TipoConsola", {
               required: "Debe seleccionar una opción",
