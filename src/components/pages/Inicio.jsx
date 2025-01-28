@@ -3,6 +3,7 @@ import "../../style/Inicio.css";
 import Productos from "../Productos/Productos";
 import SliderPortada from "../Slider/SliderPortada";
 import { getProductos } from "../helpers/queriesProductos";
+import PortadaFifa from "../Productos/PortadaFifa";
 
 const Inicio = () => { 
   // creamos un estado para guardar los productos
@@ -16,7 +17,7 @@ const Inicio = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mainSeccion">
       <section>
         <article>
           <div className="PortadaInicio">
@@ -34,10 +35,13 @@ const Inicio = () => {
           </div>
         </article>
         <article>
-            <SliderPortada></SliderPortada>
+            <SliderPortada productos={productos}></SliderPortada>
+        </article>
+        <article className="my-5">
+          <Productos productos={productos}></Productos>
         </article>
         <article>
-          <Productos productos={productos}></Productos>
+          <PortadaFifa></PortadaFifa>
         </article>
       </section>
     </div>

@@ -12,8 +12,10 @@ import FormularioProducto from "./components/Productos/FormularioProducto";
 import Login from "./components/pages/Login";
 import { useEffect, useState } from "react";
 import ProtectorRutas from "./components/Routes/ProtectorRutas";
-import RutasAdministrador from "./components/Routes/RutasAdministrador";
+import RutasAdministrador from "./components/Routes/RutasAdministrador"
+import SobreNosotros from "./components/pages/SobreNosotros";
 import Carrito from "./components/pages/Carrito";
+
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
@@ -42,7 +44,6 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-          DetalleProducto
           <Menu
             setusuarioLogeado={setusuarioLogeado}
             usuarioLogeado={usuarioLogeado}
@@ -68,6 +69,7 @@ function App() {
             />
             <Route path="/Carrito" element={<Carrito carrito={carrito} setCarrito={setCarrito } />} />
             <Route path="*" element={<ErroR404 />}></Route>
+            <Route path="/Nosotros" element={<SobreNosotros />}></Route>
             <Route
               path="/login"
               element={<Login setusuarioLogeado={setusuarioLogeado}></Login>}

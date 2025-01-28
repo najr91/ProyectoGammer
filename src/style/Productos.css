@@ -23,6 +23,17 @@
     left: 0;
 }
 
+.inputFiltro{
+    background-color: transparent;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: 1px solid grey;
+    padding: 0px 10px;
+    border-radius: 10px;
+
+}
+
 .Container-TituloProducto button{
     padding: 10px 40px;
     border: 1px solid transparent;
@@ -40,6 +51,9 @@
 @media screen and (max-width:599px){
     .Container-TituloProducto{
         margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
     
     .Container-TituloProducto button{
