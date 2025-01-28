@@ -11,6 +11,8 @@ import ErroR404 from "./components/pages/ErroR404";
 import FormularioProducto from "./components/Productos/FormularioProducto";
 import Login from "./components/pages/Login";
 import { useState } from "react";
+import ProtectorRutas from "./components/Routes/ProtectorRutas";
+import RutasAdministrador from "./components/Routes/RutasAdministrador";
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem("userKey")) || "";
@@ -20,29 +22,25 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-          <Menu setusuarioLogeado={setusuarioLogeado} usuarioLogeado={usuarioLogeado}></Menu>
+          DetalleProducto
+          <Menu
+            setusuarioLogeado={setusuarioLogeado}
+            usuarioLogeado={usuarioLogeado}
+          ></Menu>
           <Routes>
             <Route path="/" element={<Inicio></Inicio>}></Route>
             <Route
               path="/DetalleProducto/:id"
               element={<DetalleProducto></DetalleProducto>}
             ></Route>
-            {/* <Route
-              path="/DetalleProducto"
-              element={<DetalleProducto></DetalleProducto>}
-            ></Route> */}
             <Route
-              path="/administrador"
-              element={<Administrador></Administrador>}
-            ></Route>
-            <Route
-              path="/administrador/crear"
-              element={<FormularioProducto crearProducto={true} />}
-            ></Route>
-            <Route
-              path="/administrador/editar/:id"
-              element={<FormularioProducto crearProducto={false} />}
-            ></Route>
+              path="/administrador/*" // Esto asegura que las rutas dentro de "/administrador" se manejen correctamente
+              element={
+                <ProtectorRutas>
+                  <RutasAdministrador />
+                </ProtectorRutas>
+              }
+            />
             <Route path="*" element={<ErroR404 />}></Route>
             <Route
               path="/login"
