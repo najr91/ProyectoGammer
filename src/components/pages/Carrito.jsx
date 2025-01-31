@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { Button, Card, Row, Col, Modal, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import "../../style/Carrito.css";
+import Table from "react-bootstrap/Table";
 
 const Carrito = ({ carrito, setCarrito }) => {
   const [showModal, setShowModal] = useState(false);
+  const comprobanteLocalStorage = JSON.parse(localStorage.getItem('comprobante')) || []
+  const [comprobante, setComprobante] = useState(comprobanteLocalStorage);
   const {
     register,
     handleSubmit,
@@ -36,29 +40,29 @@ const Carrito = ({ carrito, setCarrito }) => {
       icon: "success",
       draggable: false,
     });
+
+   const nuevoComprobante =[...comprobante,data]
+   setComprobante(nuevoComprobante)
+   localStorage.setItem('comprobante', JSON.stringify(nuevoComprobante));
     handleCloseModal();
   };
 
   return (
-
     <section className="container mt-5 py-5">
       <h3 className="text-center mb-4">Tu Carrito de Compras</h3>
-
-
-      <Row className="g-3">
-        {carrito.length > 0 ? (
-          carrito.map((producto, index) => (
-            <Col md={12} key={index} className="mb-4">
-              <Card className="shadow-sm border-light rounded">
-                <Row>
-                  <Col md={3}>
-                    <Card.Img
-                      variant="top"
-                      src={producto.imagen}
-                      className="img-fluid rounded-start"
-                    />
-                  </Col>
-                  <Col md={9}>
+      <div className="row">
+          {carrito.length > 0 ? (
+            carrito.map((producto, index) => (
+              <div className="col-12 col-md-6 col-lg-4 my-4" key={index}>
+                <Card className="shadow-sm  bg-dark text-light">
+                  <div>
+                    <div className="card-head">
+                      <Card.Img
+                        variant="top"
+                        src={producto.imagen}
+                        className="img-fluid rounded-start"
+                      />
+                    </div>
                     <Card.Body>
                       <Card.Title>{producto.nombreJuego}</Card.Title>
                       <Card.Text>{producto.descripcion}</Card.Text>
@@ -75,17 +79,16 @@ const Carrito = ({ carrito, setCarrito }) => {
                         </Button>
                       </div>
                     </Card.Body>
-                  </Col>
-                </Row>
-              </Card>
-            </Col>
-          ))
-        ) : (
-          <p className="text-center w-100">
-            No tienes productos en el carrito.
-          </p>
-        )}
-      </Row>
+                  </div>
+                </Card>
+              </div>
+            ))
+          ) : (
+            <p className="text-center w-100">
+              No tienes productos en el carrito.
+            </p>
+          )}
+        </div>
 
       {carrito.length > 0 && (
         <div className="d-flex justify-content-between align-items-center mt-4">
@@ -101,7 +104,35 @@ const Carrito = ({ carrito, setCarrito }) => {
           </Button>
         </div>
       )}
-
+      <div className="container-Comprobante">
+        {
+          comprobante.length > 0 ? (
+            <Table striped bordered hover responsive variant="dark">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Fecha de vencimiento</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comprobante.map((item) => (
+                <tr>
+                  <td>1</td>
+                  <td>{item.nombre}</td>
+                  <td>{item.direccion}</td>
+                  <td>{item.fechaVencimiento}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          ):(
+           <p>No hay comprobante</p>
+          )
+        }
+       
+      </div>
       {/* Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>

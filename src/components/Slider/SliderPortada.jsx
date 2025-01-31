@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-const SliderPortada = ({productos}) => {
+const SliderPortada = ({productos = []}) => {
     return (
         <div className='SliderPortada'>
             <div className='ContainerSlider my-5 container'>
@@ -45,8 +45,8 @@ const SliderPortada = ({productos}) => {
                     {
                         productos.slice(0,4).map((item)=>(
                             <SwiperSlide>
-                            <img src={item.imagen} />
-                            <div>{item.nombreJuego}</div>
+                            <img src={item?.imagen} />
+                            <div>{item?.nombreJuego}</div>
                         </SwiperSlide>
                         ))
                     }

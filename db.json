@@ -1,26 +1,14 @@
 {
   "Productos": [
     {
-      "nombreJuego": "League of leguend",
-      "precio": "15000",
-      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CNTWUAMXZRF3BPIYPCNPFHOMJQ.jpg",
-      "categoria": "MOBA",
-      "descripcion_breve": "League of Legends: juego de estrategia  en línea.",
-      "descripcion_amplia": "eague of Legends (LoL) es un juego de estrategia en línea multijugador donde dos equipos de cinco jugadores compiten para destruir la base enemiga. Con un enfoque en habilidades, trabajo en equipo y estrategia.",
-      "desarrollador": "Riot Games",
-      "JuegoSemanal": "Si",
-      "TipoConsola": "windows",
-      "id": "3EtvOYZ"
-    },
-    {
       "nombreJuego": "ark ",
-      "precio": "23000",
+      "precio": "5001",
       "imagen": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1113410/capsule_616x353.jpg?t=1622858339",
       "categoria": "Survival",
       "descripcion_breve": "ARK es juego de supervivencia y acción.",
       "descripcion_amplia": "Survival Evolved es un juego de supervivencia en un mundo abierto lleno de dinosaurios y criaturas prehistóricas. Los jugadores deben recolectar recursos, construir refugios y dominar a las criaturas para sobrevivir.",
       "desarrollador": "Studio Wildcard",
-      "JuegoSemanal": "No",
+      "JuegoSemanal": "Si",
       "TipoConsola": "xbox-series-x",
       "id": "HVrL6n1"
     },
@@ -35,18 +23,6 @@
       "JuegoSemanal": "Si",
       "TipoConsola": "windows",
       "id": "qSmLsPT"
-    },
-    {
-      "nombreJuego": "Mortal Kombat X",
-      "precio": "23000",
-      "imagen": "https://i.blogs.es/2f03c7/mk/1366_2000.jpg",
-      "categoria": "Lucha",
-      "descripcion_breve": "Mortal Kombat: juego de lucha y combates violentos",
-      "descripcion_amplia": "Mortal Kombat es una serie de videojuegos de lucha famosa por sus combates brutales y fatalities. Los jugadores controlan personajes con habilidades únicas y luchan en diferentes modalidades.",
-      "desarrollador": "NetherRealm Studios",
-      "JuegoSemanal": "No",
-      "TipoConsola": "ps4",
-      "id": "NU3U6NH"
     },
     {
       "nombreJuego": "Final Fantasy VII",

@@ -40,10 +40,10 @@ const ItemProducto = ({ producto, setListaProductos }) => {
           className="btn btn-warning me-lg-2"
           to={`/administrador/editar/${producto.id}`}
         >
-          <i className="bi bi-pencil-square"></i>
+          Editar
         </Link>
         <Button variant="danger" onClick={borrarProducto}>
-          <i className="bi bi-trash"></i>
+          Eliminar
         </Button>
       </td>
     </tr>

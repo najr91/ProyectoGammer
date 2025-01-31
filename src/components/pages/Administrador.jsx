@@ -26,7 +26,7 @@ const Administrador = () => {
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4  my-5 text-white ">Juegos Disponibles</h1>
         <Link className="btn btn-primary" to="/administrador/crear">
-  <i className="bi bi-file-earmark-plus"></i>
+        Añadir
 </Link>
 
       </div>

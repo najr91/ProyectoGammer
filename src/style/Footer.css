@@ -1,0 +1,54 @@
+/*  Estilos del footer */
+ footer a{
+    text-decoration: none;
+    color: white;
+ }
+
+.bg-color5 {
+    background-color: #1c1d1f;
+    color: #fafbfb;
+  }
+  
+  .bg-color4 {
+    background-color: #87827e;
+    color: #fafbfb;
+  }
+  
+  .img-footer {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .link-footer {
+    color: #fafbfb;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .link-footer:hover {
+    color: var(--color2);
+    transition: 0.3s;
+  }
+
+  .redes-sociales{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.categoria{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ayuda{
+    height: 200px;
+    width: 100%;
+    padding-top: 20px;
+}
