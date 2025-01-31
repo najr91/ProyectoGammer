@@ -7,7 +7,7 @@ import Table from "react-bootstrap/Table";
 
 const Carrito = ({ carrito, setCarrito }) => {
   const [showModal, setShowModal] = useState(false);
-  const comprobanteLocalStorage = localStorage.getItem('comprobante') || []
+  const comprobanteLocalStorage = JSON.parse(localStorage.getItem('comprobante')) || []
   const [comprobante, setComprobante] = useState(comprobanteLocalStorage);
   const {
     register,
@@ -41,9 +41,9 @@ const Carrito = ({ carrito, setCarrito }) => {
       draggable: false,
     });
 
-    setComprobante([...comprobante, data]);
-    localStorage.setItem('comprobante',JSON.stringify(comprobante))
-    console.log(comprobante);
+   const nuevoComprobante =[...comprobante,data]
+   setComprobante(nuevoComprobante)
+   localStorage.setItem('comprobante', JSON.stringify(nuevoComprobante));
     handleCloseModal();
   };
 
@@ -51,7 +51,7 @@ const Carrito = ({ carrito, setCarrito }) => {
     <section className="container mt-5 py-5">
       <h3 className="text-center mb-4">Tu Carrito de Compras</h3>
 
-      <Row className="g-3">
+      {/* <Row className="g-3">
         {carrito.length > 0 ? (
           carrito.map((producto, index) => (
             <Col md={12} key={index} className="mb-4">
@@ -91,7 +91,46 @@ const Carrito = ({ carrito, setCarrito }) => {
             No tienes productos en el carrito.
           </p>
         )}
-      </Row>
+      </Row> */}
+      <div className="row">
+          {carrito.length > 0 ? (
+            carrito.map((producto, index) => (
+              <div className="col-12 col-md-6 col-lg-4 my-4" key={index}>
+                <Card className="shadow-sm  bg-dark text-light">
+                  <div>
+                    <div className="card-head">
+                      <Card.Img
+                        variant="top"
+                        src={producto.imagen}
+                        className="img-fluid rounded-start"
+                      />
+                    </div>
+                    <Card.Body>
+                      <Card.Title>{producto.nombreJuego}</Card.Title>
+                      <Card.Text>{producto.descripcion}</Card.Text>
+                      <h5 className="text-success">
+                        ${parseFloat(producto.precio).toLocaleString()}
+                      </h5>
+                      <div className="d-flex justify-content-end">
+                        <Button
+                          variant="danger"
+                          className="mt-2 w-100"
+                          onClick={() => eliminarDelCarrito(producto.id)}
+                        >
+                          Eliminar del carrito
+                        </Button>
+                      </div>
+                    </Card.Body>
+                  </div>
+                </Card>
+              </div>
+            ))
+          ) : (
+            <p className="text-center w-100">
+              No tienes productos en el carrito.
+            </p>
+          )}
+        </div>
 
       {carrito.length > 0 && (
         <div className="d-flex justify-content-between align-items-center mt-4">
@@ -108,26 +147,33 @@ const Carrito = ({ carrito, setCarrito }) => {
         </div>
       )}
       <div className="container-Comprobante">
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Nombre</th>
-              <th>Direccion</th>
-              <th>Fecha de vencimiento</th>
-            </tr>
-          </thead>
-          <tbody>
-            {comprobante.map((item) => (
+        {
+          comprobante.length > 0 ? (
+            <Table striped bordered hover responsive variant="dark">
+            <thead>
               <tr>
-                <td>1</td>
-                <td>{item.nombre}</td>
-                <td>{item.direccion}</td>
-                <td>{item.fechaVencimiento}</td>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Fecha de vencimiento</th>
               </tr>
-            ))}
-          </tbody>
-        </Table>
+            </thead>
+            <tbody>
+              {comprobante.map((item) => (
+                <tr>
+                  <td>1</td>
+                  <td>{item.nombre}</td>
+                  <td>{item.direccion}</td>
+                  <td>{item.fechaVencimiento}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          ):(
+           <p>No hay comprobante</p>
+          )
+        }
+       
       </div>
       {/* Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../../style/Productos.css";
 import CardProducto from "./CardProducto";
 
-const Productos = ({ productos }) => {
+const Productos = ({ productos=[] }) => {
   //creamos un estado para el filtro
   const [Filtro, setFiltro] = useState({
     Busqueda: "",

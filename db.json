@@ -119,18 +119,6 @@
       "JuegoSemanal": "No",
       "TipoConsola": "n64",
       "id": "c6-pVqj"
-    },
-    {
-      "id": "e0bd",
-      "nombreJuego": "mincraf",
-      "precio": "6000",
-      "imagen": "https://images.pexels.com/photos/25526696/pexels-photo-25526696/free-photo-of-vista-nocturna-de-la-calle-shinjuku-sun-hung.jpeg",
-      "categoria": "Aventura",
-      "descripcion_breve": "jhkjhksl",
-      "descripcion_amplia": "lkkjsnnfkdjs",
-      "desarrollador": "jsdnkfdsf",
-      "JuegoSemanal": "Si",
-      "TipoConsola": "wii-u"
     }
   ]
 }
