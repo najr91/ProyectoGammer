@@ -15,6 +15,7 @@ import ProtectorRutas from "./components/Routes/ProtectorRutas";
 import RutasAdministrador from "./components/Routes/RutasAdministrador"
 import SobreNosotros from "./components/pages/SobreNosotros";
 import Carrito from "./components/pages/Carrito";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 
