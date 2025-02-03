@@ -11,7 +11,7 @@ const Footer = () => {
         <article class="container">
           <div className="row text-center align-items-center">
             <div className="col-12 col-sm-6 col-md-3 col-lg-3 mb-4">
-              <a href="./index.html" className="text-decoration-none">
+              <a href="/" className="text-decoration-none">
                 <img src={GameOn} alt="Logo GameOn" className="Logo" />
               </a>
             </div>
