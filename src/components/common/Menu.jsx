@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink,useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import GameOn from "../../img/GameOn.png";
 
 const Menu = ({ usuarioLogeado, setusuarioLogeado }) => {
   const navegacion = useNavigate();
@@ -16,7 +17,7 @@ const Menu = ({ usuarioLogeado, setusuarioLogeado }) => {
   return (
     <Navbar expand="lg" className="Menu navbar-dark">
       <Container>
-        <Navbar.Brand href="/">GameOn</Navbar.Brand>
+        <Navbar.Brand href="/"><img src={GameOn} alt="Logo GameOn" className="LogoMenu" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
