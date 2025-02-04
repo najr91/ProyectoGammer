@@ -39,3 +39,8 @@ El proyecto se construyó utilizando las siguientes tecnologías y dependencias:
 - **SweetAlert2**: Librería para mostrar alertas y mensajes interactivos.
 - **Bootstrap Icons**: Para integrar iconos en la interfaz de usuario.
 
+## Autores del Proyecto
+
+- **Nelson Juarez Rivas**: Encargado de la parte visual y navegación del sitio.
+- **Matias Sanchez**: Responsable de la autenticación y documentación.
+- **Dana Alboornoz**: Enfocada en la administración y gestión de productos.
