@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
-      <section class="bg-color5 py-4">
-        <article class="container">
+      <section className="bg-color5 py-4">
+        <article className="container">
           <div className="row text-center align-items-center">
             <div className="col-12 col-sm-6 col-md-3 col-lg-3 mb-4">
               <a href="/" className="text-decoration-none">
@@ -24,20 +24,26 @@ const Footer = () => {
                       href="https://www.instagram.com/?hl=es"
                       className=" link-footer text-light"
                     >
-                      <i className="bi bi-instagram"></i>
+                      <Instagram></Instagram>
                     </a>
                   </li>
-                  <li className="display-inline">
+
+                  <li className="display-inline ">
                     <a
-                      href="https://www.youtube.com/"
-                      className="bi bi-youtube link-footer"
-                    ></a>
+                      href="https://www.Facebook.com/?hl=es"
+                      className=" link-footer text-light"
+                    >
+                      <Facebook></Facebook>
+                    </a>
                   </li>
-                  <li className="display-inline">
+
+                  <li className="display-inline ">
                     <a
-                      href="https://x.com/?mx=2"
-                      className="bi bi-twitter-x link-footer"
-                    ></a>
+                      href="https://www.Whatsapp.com/?hl=es"
+                      className=" link-footer text-light"
+                    >
+                      <Whatsapp></Whatsapp>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -120,10 +126,10 @@ const Footer = () => {
           </div>
         </article>
       </section>
-      <section class="bg-color4 pt-4 pb-2">
-        <div class="container text-center">
-          <div class="row align-items-center">
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
+      <section className="bg-color4 pt-4 pb-2">
+        <div className="container text-center">
+          <div className="row align-items-center">
+            <div className="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
               <a href="*" className=" text-decoration-none nav-link1 fs-6">
                 Términos y Condiciones
               </a>
