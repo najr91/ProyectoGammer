@@ -17,7 +17,6 @@ const Login = ({ setusuarioLogeado }) => {
   const navegacion = useNavigate();
 
   const despuesForm = (usuario) => {
-    console.log(usuario);
     if (login(usuario)) {
       setusuarioLogeado(usuario.email);
       Swal.fire({

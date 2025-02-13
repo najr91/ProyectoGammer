@@ -7,7 +7,7 @@ const ErroR404 = () => {
   return (
    <>
    <div className="cont-404">
-    <img src={svg} alt="" className="fs-white"/>
+    <img src={svg} alt="Imagen error404" className="fs-white"/>
     <Link className="btn btn-primary" to={"/"} variant="primary " >Volver al inicio</Link>
    </div>
    </>

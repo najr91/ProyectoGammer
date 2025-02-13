@@ -32,7 +32,6 @@ export const listarProductoAPI = async () => {
 
 export const borrarProductoAPI = async (id) => {
   try {
-    console.log("Intentando borrar producto con ID:", id);
     const respuesta = await fetch("http://localhost:3001/Productos/" + id, {
       method: "DELETE",
     });

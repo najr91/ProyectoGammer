@@ -7,12 +7,10 @@ import PortadaFifa from "../Productos/PortadaFifa";
 import { Link } from "react-router-dom";
 
 const Inicio = () => { 
-  // creamos un estado para guardar los productos
   const [productos, setProductos] = useState([])
 
   useEffect(() => {
     getProductos().then((respuesta) => {
-      // actualizamos el estado como producto
       setProductos(respuesta);
     });
   }, []);

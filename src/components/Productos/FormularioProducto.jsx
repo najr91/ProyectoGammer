@@ -29,8 +29,7 @@ const FormularioProducto = ({ crearProducto }) => {
   const cargarProducto = async () => {
     try {
       const respuesta = await getProductoAPI(id);
-      const datos = await respuesta.json(); // Esta es la forma correcta
-      console.log("Datos a cargar:", datos);
+      const datos = await respuesta.json(); 
 
       if (respuesta.status === 200) {
         setValue("nombreJuego", datos.nombreJuego);

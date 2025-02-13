@@ -1,7 +1,6 @@
 import '../../style/SliderPortada.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -43,12 +42,12 @@ const SliderPortada = ({productos = []}) => {
                     className="mySwiper"
                 >
                     {
-                        productos.slice(0,4).map((item)=>(
-                            <SwiperSlide>
-                            <img src={item?.imagen} />
-                            <div>{item?.nombreJuego}</div>
+                      productos.slice(0, 4).map((item) => (
+                        <SwiperSlide key={item.id}> 
+                          <img src={item?.imagen} alt={item?.nombreJuego} />
+                          <div>{item?.nombreJuego}</div>
                         </SwiperSlide>
-                        ))
+                      ))
                     }
                     
                   
