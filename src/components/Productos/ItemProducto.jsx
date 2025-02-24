@@ -19,7 +19,6 @@ const ItemProducto = ({ producto, setListaProductos }) => {
 
   return (
     <tr>
-      <td className="text-center">{producto.id}</td>
       <td>{producto.nombreJuego}</td>
       <td className="text-end">{producto.precio}</td>
       <td className="text-center">
@@ -30,10 +29,8 @@ const ItemProducto = ({ producto, setListaProductos }) => {
           style={{ maxWidth: "100px" }}
         />
       </td>
-      <td>{producto.descripcion}</td>
       <td>{producto.categoria}</td>
       <td>{producto.desarrollador}</td>
-      <td>{producto.reseñas}</td>
 
       <td className="text-center">
         <Link
