@@ -7,7 +7,6 @@ export const getProductos = async ()=> {
         const dato = await Productos.json() 
         return dato 
      } catch (error) {
-        console.log(error)
      }    
 }
 

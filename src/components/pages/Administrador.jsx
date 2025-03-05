@@ -34,14 +34,11 @@ const Administrador = () => {
       <Table responsive striped bordered hover>
         <thead>
           <tr className="text-center">
-            <th>ID</th>
-            <th>Gammer</th>
+            <th>Nombre</th>
             <th>Precio</th>
             <th>Imagen</th>
-            <th>Descripcion</th>
             <th>Categoría</th>
             <th>Desarrollador</th>
-            <th>Reseña</th>
             <th>Editar | Borrar</th>
           </tr>
         </thead>
